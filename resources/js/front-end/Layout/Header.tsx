@@ -87,21 +87,16 @@ const Header: React.FC = () => {
     ];
 
     return (
-        <header className="w-full">
-        <div className="fixed top-0 left-0 w-full z-50">
-          <TopBar />
-        </div>
-        <div className="h-[topBarHeight]"></div>
-        <nav className={`sticky top-0 w-full z-40 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
-          <MainNavigation
-            navItems={navItems}
-            mobileMenuOpen={mobileMenuOpen}
-            activeDropdown={activeDropdown}
-            toggleMobileMenu={toggleMobileMenu}
-            handleDropdownToggle={handleDropdownToggle}
-            currentPath={currentPath}
-          />
-        </nav>
+      <header className={`sticky top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
+        <TopBar />
+        <MainNavigation
+          navItems={navItems}
+          mobileMenuOpen={mobileMenuOpen}
+          activeDropdown={activeDropdown}
+          toggleMobileMenu={toggleMobileMenu}
+          handleDropdownToggle={handleDropdownToggle}
+          currentPath={currentPath}
+        />
       </header>
     );
   };
