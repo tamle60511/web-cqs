@@ -55,7 +55,7 @@ const GlobalReach: React.FC<GlobalReachProps> = ({ className }) => {
                 </div>
                 <div>
                   <div className="text-sm text-neutral-500">Location</div>
-                  <div className="font-medium">Western Shanghai</div>
+                  <div className="font-medium">Western Vietnamese</div>
                 </div>
               </div>
               <div className="flex items-center">
@@ -64,7 +64,7 @@ const GlobalReach: React.FC<GlobalReachProps> = ({ className }) => {
                 </div>
                 <div>
                   <div className="text-sm text-neutral-500">Employees</div>
-                  <div className="font-medium">250+</div>
+                  <div className="font-medium">1000+</div>
                 </div>
               </div>
               <div className="flex items-center">
@@ -79,9 +79,10 @@ const GlobalReach: React.FC<GlobalReachProps> = ({ className }) => {
             </div>
 
             <p className="text-neutral-700 mb-4 leading-relaxed text-sm border-l-2 border-neutral-300 pl-4">
-              Zhongsen Mold (Xitang) is a professional precision mold and manufacturing company located in western Shanghai.
-              Adjacent to the Shanghai-Nanjing Expressway, Shanghai-Hangzhou High-Speed Railway and Metro Line 17,
-              it enjoys convenient transportation and prominent geographical advantages.
+            CQS provides customers with a “one-stop” service, besides offering the die-casting production line, the CNC precision
+                            processing production line, the stamping (metalworking),the paint line, the assembly line and the packaging line, it also
+                            offers the test of quality control at each station to with assure products meet customers’ requirements. So far, the
+                            products have been sold to Taiwan, the United States, Canada, Mexico, Japan, Italy, China, and Southeast Asia.
             </p>
 
             <p className="text-neutral-700 mb-6 leading-relaxed text-sm">
@@ -138,12 +139,12 @@ const GlobalReach: React.FC<GlobalReachProps> = ({ className }) => {
                 <div className="flex flex-col space-y-2">
                   <div className="flex items-center">
                     <div className="w-2 h-6 bg-primary-600 mr-3"></div>
-                    <div className="text-white font-medium">Shanghai Manufacturing Facility</div>
+                    <div className="text-white font-medium">CQS Manufacturing Facility</div>
                   </div>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center text-neutral-300">
                       <MapPin size={14} className="mr-1" />
-                      <span>Western Shanghai Industrial Zone</span>
+                      <span>Western VietNamese Industrial Zone</span>
                     </div>
                     <div className="flex items-center text-neutral-300">
                       <Clock size={14} className="mr-1" />
