@@ -33,7 +33,7 @@ const GlobalReach: React.FC<GlobalReachProps> = ({ className }) => {
             </div>
 
             <h2 className="text-3xl font-bold text-neutral-900 mb-6 tracking-tight">
-              Zhongsen <span className="text-primary-600">Precision Mold</span>
+              CQS <span className="text-primary-600">PRECISION DIE CASTING INC</span>
             </h2>
 
             <div className="w-20 h-0.5 bg-neutral-300 mb-8"></div>
