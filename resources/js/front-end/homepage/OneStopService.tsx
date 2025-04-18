@@ -23,40 +23,40 @@ export default function OneStopService({ services }: OneStopServiceProps) {
   // Default services data if not provided via props
   const defaultServices: Service[] = [
     {
-      title: 'Die-Casting Production',
-      description: 'High-pressure aluminum die casting with tolerances of ±0.1mm',
+      title: 'High Pressure Die Casting',
+      description: 'Advanced aluminum die casting with machines ranging from 250 to 1,650 tons',
       icon: Factory,
-      code: 'DC-01'
+      code: 'HPDC'
     },
     {
-      title: 'CNC Machining',
-      description: 'Precision 5-axis CNC machining down to ±0.01mm tolerance',
+      title: 'CNC Precision Processing',
+      description: 'High-precision CNC machining for complex component manufacturing',
       icon: Settings,
-      code: 'CNC-02'
+      code: 'CNC'
     },
     {
-      title: 'Metal Stamping',
-      description: 'High-volume stamping operations with progressive dies',
+      title: 'Gravity Die Casting',
+      description: 'Specialized gravity casting for premium aluminum components',
       icon: Hammer,
-      code: 'STP-03'
+      code: 'GDC'
     },
     {
       title: 'Surface Treatment',
-      description: 'Anodizing, powder coating, and wet painting processes',
+      description: 'Professional painting and surface finishing for enhanced aesthetics and protection',
       icon: Paintbrush,
-      code: 'SRF-04'
+      code: 'PNT'
     },
     {
       title: 'Assembly Services',
-      description: 'Semi and fully automated assembly with quality verification',
+      description: 'Comprehensive assembly solutions with rigorous quality control',
       icon: Wrench,
-      code: 'ASM-05'
+      code: 'ASM'
     },
     {
-      title: 'Logistics & Packaging',
-      description: 'Custom packaging and just-in-time delivery solutions',
+      title: 'Packaging & Logistics',
+      description: 'Global distribution to Taiwan, the US, Canada, Mexico, Japan, Italy, China, and Southeast Asia',
       icon: Package,
-      code: 'LOG-06'
+      code: 'PKG'
     }
   ];
 
@@ -80,19 +80,20 @@ export default function OneStopService({ services }: OneStopServiceProps) {
           {/* Left Column - Text and Services (7 columns) */}
           <div className="lg:col-span-7">
             <div className="inline-flex items-center bg-neutral-800/90 text-white px-4 py-2 rounded-sm mb-6 border-l-2 border-primary-600">
-              <span className="text-sm font-medium tracking-wider uppercase">Integrated Services</span>
+              <span className="text-sm font-medium tracking-wider uppercase">Comprehensive Services</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 tracking-tight">
-              End-to-End <span className="text-primary-600">Manufacturing</span> Capabilities
+              Complete <span className="text-primary-600">One-Stop</span> Manufacturing Solutions
             </h2>
 
             <div className="w-20 h-0.5 bg-neutral-300 mb-8"></div>
 
             <p className="text-neutral-600 mb-8 leading-relaxed">
-              Our vertically integrated production facilities provide comprehensive manufacturing services
-              from raw aluminum to finished components. This streamlined approach ensures consistent quality,
-              reduced lead times, and optimized costs for automotive and motorcycle parts production.
+              CQS provides customers with comprehensive "one-stop" services, from die-casting production
+              to CNC precision processing, stamping, painting, assembly, and packaging. Our integrated
+              approach ensures consistent quality and streamlined production for automotive and motorcycle
+              components with global distribution.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -109,14 +110,14 @@ export default function OneStopService({ services }: OneStopServiceProps) {
             </div>
 
             <Link
-              href="/capabilities"
+              href="/technologies"
               className="inline-flex items-center justify-center px-6 py-3
                        bg-gradient-to-r from-primary-600 to-primary-700 text-white
                        font-medium tracking-wide rounded-sm border border-primary-700
                        hover:from-primary-700 hover:to-primary-800 transition-all
                        shadow-lg hover:shadow-primary-900/30 group"
             >
-              Explore Manufacturing Capabilities
+              Discover Our Technologies
               <ExternalLink className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -130,12 +131,12 @@ export default function OneStopService({ services }: OneStopServiceProps) {
 
               {/* Technical reference badge */}
               <div className="absolute top-3 right-3 bg-neutral-900/80 backdrop-blur-sm text-xs font-mono text-white px-2 py-1 z-10 border-r border-primary-600">
-                MFG-FACILITY-01
+                CQS-FACILITY
               </div>
 
               <img
                 src={company}
-                alt="Manufacturing Facility"
+                alt="CQS Manufacturing Facility"
                 className="w-full h-full object-cover"
               />
 
@@ -148,8 +149,8 @@ export default function OneStopService({ services }: OneStopServiceProps) {
                 <div className="flex items-center">
                   <div className="w-2 h-6 bg-primary-600 mr-3"></div>
                   <div>
-                    <div className="text-white font-medium">State-of-the-Art Manufacturing Facility</div>
-                    <div className="text-neutral-400 text-sm">ISO 9001:2015 Certified | 15,000 sq.m</div>
+                    <div className="text-white font-medium">Advanced Die Casting Facility</div>
+                    <div className="text-neutral-400 text-sm">IATF16949 & ISO9001 Certified | Global Distribution</div>
                   </div>
                 </div>
               </div>

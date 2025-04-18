@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from '@inertiajs/react';
 import { ChevronRight, File, Video, FileText, ExternalLink, LucideIcon } from 'lucide-react';
 
-
-
 // Define interfaces for type safety
 interface NewsItem {
   type: string;
@@ -25,24 +23,24 @@ export default function NewsResources({ news }: NewsResourcesProps) {
   // Default news data if not provided via props
   const defaultNews: NewsItem[] = [
     {
-      type: 'TECHNICAL GUIDE',
-      title: 'Aluminum Die Casting Process Optimization',
+      type: 'TECHNOLOGY',
+      title: 'High Pressure Die Casting Process for Automotive Components',
       image: '/images/Aluminum.jpg',
-      url: '/resources/technical-guide/process-optimization',
+      url: '/resources/technology/hpdc-process',
       icon: FileText
     },
     {
-      type: 'WHITEPAPER',
-      title: 'Advanced Alloy Selection for Automotive Parts',
+      type: 'CASE STUDY',
+      title: 'Lightweight Aluminum Solutions for Sustainable Transportation',
       image: '/images/Advanced.jpg',
-      url: '/resources/whitepaper/alloy-selection',
+      url: '/resources/case-study/lightweight-solutions',
       icon: File
     },
     {
       type: 'VIDEO',
-      title: 'CNC Machining: Precision Engineering in Action',
+      title: 'CQS One-Stop Manufacturing: From Die Casting to Assembly',
       image: '/images/cnc.jpg',
-      url: '/resources/video/cnc-machining',
+      url: '/resources/video/manufacturing-process',
       icon: Video
     }
   ];
@@ -62,18 +60,18 @@ export default function NewsResources({ news }: NewsResourcesProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center mb-16">
           <div className="inline-flex items-center bg-neutral-800/90 text-white px-4 py-2 rounded-sm mb-6 border-l-2 border-primary-600">
-            <span className="text-sm font-medium tracking-wider uppercase">Technical Resources</span>
+            <span className="text-sm font-medium tracking-wider uppercase">CQS Insights</span>
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 tracking-tight text-center">
-            Die Casting <span className="text-primary-600">Knowledge Center</span>
+            Aluminum <span className="text-primary-600">Excellence Center</span>
           </h2>
 
           <div className="w-20 h-1 bg-neutral-300 mb-8"></div>
 
           <p className="text-neutral-600 text-center max-w-2xl">
-            Access our collection of technical documents, case studies, and video demonstrations
-            to gain insights into advanced aluminum die casting and CNC machining processes.
+            Explore our technical expertise in high-pressure die casting, CNC precision processing,
+            gravity die casting, and complete manufacturing solutions for automotive and motorcycle components.
           </p>
         </div>
 
@@ -99,7 +97,7 @@ export default function NewsResources({ news }: NewsResourcesProps) {
                      font-medium tracking-wide rounded-sm hover:bg-primary-600
                      hover:text-white transition-colors group"
           >
-            Explore All Technical Resources
+            View Our Manufacturing Capabilities
             <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -131,7 +129,7 @@ function ResourceCard({ type, title, image, url, icon: Icon, index }: ResourceCa
 
         {/* Technical reference number */}
         <div className="absolute bottom-4 right-4 z-20 text-white/60 text-xs font-mono">
-          REF-{(index + 101).toString().padStart(3, '0')}
+          CQS-{(index + 101).toString().padStart(3, '0')}
         </div>
       </div>
 
@@ -142,7 +140,7 @@ function ResourceCard({ type, title, image, url, icon: Icon, index }: ResourceCa
           href={url}
           className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 text-sm uppercase tracking-wide border-b border-transparent hover:border-primary-600 pb-1 w-fit"
         >
-          Access Resource
+          Learn More
           <ChevronRight className="ml-1 h-4 w-4" />
         </Link>
       </div>

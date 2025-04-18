@@ -25,16 +25,13 @@ export default function Hero() {
           <source src={Video} type="video/mp4" />
           <img
             src={Banner}
-            alt="Advanced Die Casting Technology"
+            alt="World's Leading Industry Corporation"
             className="w-full h-full object-cover"
           />
         </video>
 
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/80 via-neutral-900/50 to-transparent"></div>
       </div>
-
-      {/* Grid Pattern with reduced opacity */}
-      {/* <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div> */}
 
       {/* Content Container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 h-full flex items-center">
@@ -45,16 +42,16 @@ export default function Hero() {
             <div className="inline-flex items-center mb-6 bg-neutral-800/70 backdrop-blur-sm px-4 py-2 rounded-sm border border-neutral-700">
               <span className="h-2 w-2 rounded-full bg-primary-600 mr-2 animate-pulse"></span>
               <p className="text-white font-medium text-sm tracking-wider uppercase">
-                PRECISION ENGINEERING
+                CREATIVITY • QUALITY • SUSTAINABILITY
               </p>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6 tracking-tight">
-              Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Aluminum</span> Die Casting
+              Leading <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Aluminum</span> Die Casting Solutions
             </h1>
 
             <p className="text-white/90 text-lg max-w-xl leading-relaxed mb-8">
-              Delivering high-precision aluminum components for automotive and motorcycle industries since 1995.
+              Providing comprehensive "one-stop" services from die-casting to assembly for automotive and motorcycle components with exceptional quality and precision.
             </p>
 
             {/* Call to Actions */}
@@ -67,7 +64,7 @@ export default function Hero() {
                          hover:from-primary-700 hover:to-primary-800 transition-all
                          shadow-lg hover:shadow-primary-900/30 group"
               >
-                Explore Technologies
+                Discover Our Technologies
                 <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
 
@@ -79,7 +76,7 @@ export default function Hero() {
                          font-medium tracking-wide rounded-sm hover:bg-neutral-700/70 transition-all"
               >
                 <PlayCircle className="mr-2 h-5 w-5" />
-                Watch Our Process
+                Watch Manufacturing Process
               </button>
             </div>
           </div>

@@ -32,18 +32,19 @@ export default function CallToAction(): React.ReactElement {
           <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-primary-500 -mb-1 -mr-1"></div>
 
           {/* Section identifier badge */}
-          <div className="inline-block bg-primary-600/90 text-white text-xs tracking-wider uppercase py-1 px-3 absolute -top-3 left-8 border-l border-r border-b border-primary-700">ACTION REQ-01</div>
+          <div className="inline-block bg-primary-600/90 text-white text-xs tracking-wider uppercase py-1 px-3 absolute -top-3 left-8 border-l border-r border-b border-primary-700">CQS-CONNECT</div>
 
           <div className="text-center pt-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
-              Ready to Engineer <span className="text-primary-500">Superior Components?</span>
+              Your <span className="text-primary-500">One-Stop</span> Aluminum Die Casting Partner
             </h2>
 
             <div className="w-20 h-0.5 bg-primary-600 mx-auto mb-8"></div>
 
             <p className="text-lg text-neutral-300 mb-10 max-w-2xl mx-auto">
-              Partner with our precision engineering team to develop high-performance aluminum
-              components that meet the exacting standards of the automotive and motorcycle industry.
+              From die-casting to assembly, CQS delivers high-quality aluminum components
+              for automotive and motorcycle industries. Experience the perfect balance of
+              Creativity, Quality, and Sustainability in every product.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -56,7 +57,7 @@ export default function CallToAction(): React.ReactElement {
                          shadow-lg hover:shadow-primary-900/30 transition-all group"
               >
                 <PhoneCall className="mr-2 h-5 w-5" />
-                Contact Engineering Team
+                Contact Our Team
                 <ArrowRight className="ml-2 h-5 w-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
               </Link>
 
@@ -68,22 +69,22 @@ export default function CallToAction(): React.ReactElement {
                          transition-colors"
               >
                 <FileText className="mr-2 h-5 w-5" />
-                Request Technical Quote
+                Request a Quote
               </Link>
             </div>
 
             {/* Technical datapoints */}
             <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto mt-12 pt-8 border-t border-neutral-700">
               <div className="text-center">
-                <div className="text-2xl text-primary-500 font-bold">20+</div>
-                <div className="text-xs text-neutral-400 uppercase tracking-wider">Years Experience</div>
+                <div className="text-2xl text-primary-500 font-bold">8+</div>
+                <div className="text-xs text-neutral-400 uppercase tracking-wider">Global Markets</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl text-primary-500 font-bold">±0.01mm</div>
-                <div className="text-xs text-neutral-400 uppercase tracking-wider">Precision</div>
+                <div className="text-2xl text-primary-500 font-bold">93%</div>
+                <div className="text-xs text-neutral-400 uppercase tracking-wider">Aluminum Recycling</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl text-primary-500 font-bold">ISO 9001</div>
+                <div className="text-2xl text-primary-500 font-bold">IATF16949</div>
                 <div className="text-xs text-neutral-400 uppercase tracking-wider">Certified</div>
               </div>
             </div>

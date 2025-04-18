@@ -11,7 +11,7 @@ interface Product {
   material?: string;
 }
 
-const MoreProduct: React.FC = () => {
+const Certifications: React.FC = () => {
   // Enhanced products data with technical specifications
   const products: Product[] = [
     {
@@ -221,4 +221,4 @@ const MoreProduct: React.FC = () => {
   );
 };
 
-export default MoreProduct;
+export default Certifications;

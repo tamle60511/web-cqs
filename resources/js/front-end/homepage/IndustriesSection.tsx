@@ -1,6 +1,6 @@
 import { Link } from '@inertiajs/react';
 import React, { useState } from 'react';
-import { Car, Smartphone, Server, Wrench, Stethoscope, ChevronRight, ChevronLeft, ExternalLink } from 'lucide-react';
+import { Car, Bike, Leaf, Tractor, Scale, ChevronRight, ChevronLeft, ExternalLink } from 'lucide-react';
 
 // Define TypeScript interfaces
 interface Industry {
@@ -30,38 +30,38 @@ export default function IndustriesSection({ industries }: IndustriesSectionProps
   const defaultIndustries: Industry[] = [
     {
       name: 'AUTOMOTIVE',
-      description: 'Precision die-cast components for vehicles, from structural frame parts to high-performance engine components.',
+      description: 'High-quality aluminum components for automotive systems including brake components, suspension parts, and structural elements.',
       icon: Car,
       image: '/images/Advanced.jpg',
       url: '/industries/automotive'
     },
     {
-      name: 'CONSUMER ELECTRONICS',
-      description: 'Lightweight, heat-dissipating aluminum housings and components for modern electronic devices.',
-      icon: Smartphone,
+      name: 'MOTORCYCLE',
+      description: 'Precision die-cast components for motorcycle manufacturers, delivering lightweight and high-performance parts.',
+      icon: Bike,
       image: '/images/Aluminum.jpg',
-      url: '/industries/consumer-electronics'
+      url: '/industries/motorcycle'
     },
     {
-      name: 'ENTERPRISE TECHNOLOGY',
-      description: 'Critical heat sink components and chassis elements for servers and data infrastructure.',
-      icon: Server,
+      name: 'GREEN ENERGY',
+      description: 'Sustainable aluminum products designed for green energy applications, reducing environmental impact while maintaining performance.',
+      icon: Leaf,
       image: '/images/cnc.jpg',
-      url: '/industries/enterprise-technology'
+      url: '/industries/green-energy'
     },
     {
-      name: 'INDUSTRIAL EQUIPMENT',
-      description: 'Durable components for machinery, tools, and industrial applications requiring precision tolerances.',
-      icon: Wrench,
+      name: 'AGRICULTURAL',
+      description: 'Durable aluminum components for agricultural equipment and machinery, designed to withstand demanding environments.',
+      icon: Tractor,
       image: '/images/Material-1.jpg',
-      url: '/industries/hardware'
+      url: '/industries/agricultural'
     },
     {
-      name: 'MEDICAL DEVICES',
-      description: 'Lightweight, sterilizable aluminum components for medical devices and diagnostic equipment.',
-      icon: Stethoscope,
+      name: 'LIGHTWEIGHT PRODUCTS',
+      description: 'Innovative lightweight aluminum solutions that reduce weight, increase efficiency, and improve performance across multiple applications.',
+      icon: Scale,
       image: '/images/Material-2.jpg',
-      url: '/industries/medical'
+      url: '/industries/lightweight-products'
     }
   ];
 
@@ -95,18 +95,19 @@ export default function IndustriesSection({ industries }: IndustriesSectionProps
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center mb-16">
           <div className="inline-flex items-center bg-neutral-800/90 text-white px-4 py-2 rounded-sm mb-6 border-l-2 border-primary-600">
-            <span className="text-sm font-medium tracking-wider uppercase">Industry Solutions</span>
+            <span className="text-sm font-medium tracking-wider uppercase">Industry Applications</span>
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 tracking-tight text-center">
-            Precision Engineering for <span className="text-primary-600">Multiple Sectors</span>
+            Comprehensive <span className="text-primary-600">Aluminum Solutions</span>
           </h2>
 
           <div className="w-20 h-0.5 bg-neutral-300 mb-8"></div>
 
           <p className="text-neutral-600 text-center max-w-2xl">
-            Our aluminum die-casting and CNC machining capabilities deliver high-performance
-            components across various industries, each with specific requirements and challenges.
+            CQS delivers high-quality aluminum die-cast components across multiple industries,
+            with products distributed to Taiwan, the United States, Canada, Mexico, Japan, Italy,
+            China, and Southeast Asia.
           </p>
         </div>
 
@@ -148,14 +149,14 @@ export default function IndustriesSection({ industries }: IndustriesSectionProps
 
         <div className="flex flex-col md:flex-row justify-between items-center mt-12">
           <Link
-            href="/industries"
+            href="/products"
             className="inline-flex items-center justify-center px-6 py-3
                      bg-gradient-to-r from-primary-600 to-primary-700 text-white
                      font-medium tracking-wide rounded-sm border border-primary-700
                      hover:from-primary-700 hover:to-primary-800 transition-all
                      shadow-lg hover:shadow-primary-900/30 group mb-6 md:mb-0"
           >
-            View All Industry Solutions
+            View Our Products
             <ExternalLink className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
 
@@ -199,7 +200,7 @@ function IndustryCard({ name, description, icon: Icon, image, url, index }: Indu
 
       {/* Technical reference number */}
       <div className="absolute top-3 right-3 text-white/50 text-xs font-mono z-20">
-        IND-{(index + 101).toString().padStart(3, '0')}
+        CQS-{(index + 101).toString().padStart(3, '0')}
       </div>
 
       <div className="absolute inset-0 flex flex-col justify-end p-6 z-20">
@@ -217,7 +218,7 @@ function IndustryCard({ name, description, icon: Icon, image, url, index }: Indu
 
         <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
           <span className="inline-flex items-center text-primary-400 text-sm border-b border-primary-700 pb-0.5 hover:text-primary-300 tracking-wider">
-            EXPLORE SOLUTIONS
+            VIEW PRODUCTS
             <ChevronRight size={14} className="ml-1" />
           </span>
         </div>

@@ -26,23 +26,24 @@ const FactoryStrengthSection = () => {
                     <div className="lg:col-span-6">
                         {/* Industrial style badge */}
                         <div className="inline-flex items-center bg-neutral-800/90 text-white px-4 py-2 rounded-sm mb-6 border-l-2 border-primary-600">
-                            <span className="text-sm font-medium tracking-wider uppercase">About Our Capabilities</span>
+                            <span className="text-sm font-medium tracking-wider uppercase">Our Company</span>
                         </div>
 
                         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-neutral-900 leading-tight tracking-tight">
                             <span className="text-primary-600 relative inline-block">
-                                Precision
+                                Creativity
                                 <span className="absolute bottom-2 left-0 w-full h-1 bg-primary-600/30 -z-10"></span>
                             </span>
-                            <span className="ml-2">Engineering Excellence</span>
+                            <span className="ml-2">Quality & Sustainability</span>
                         </h2>
 
                         <p className="text-neutral-600 mb-8 leading-relaxed">
-                            With 25 years of technical expertise, CQS specializes in high-precision mold and component manufacturing.
-                            Our comprehensive production process ensures reliable performance in every product.
-                            Since our founding, we've built a reputation for excellence, continuously refining our
-                            craft to achieve superior quality that meets the exacting standards of the automotive
-                            and motorcycle parts industry.
+                            CQS provides customers with comprehensive "one-stop" services, from die-casting production
+                            to CNC precision processing, stamping, painting, assembly, and packaging.
+                            We conduct rigorous quality control at each station to ensure our products
+                            meet and exceed our customers' expectations. Our products are trusted globally,
+                            with distribution to Taiwan, the United States, Canada, Mexico, Japan, Italy,
+                            China, and Southeast Asia.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
@@ -52,8 +53,8 @@ const FactoryStrengthSection = () => {
                                         <Award className="text-primary-600" size={22} />
                                     </div>
                                     <div>
-                                        <h3 className="text-base font-semibold text-neutral-900 uppercase tracking-wide">25+ Years Expertise</h3>
-                                        <p className="text-neutral-600 text-sm mt-1">Industry experience and technical knowledge</p>
+                                        <h3 className="text-base font-semibold text-neutral-900 uppercase tracking-wide">Quality Excellence</h3>
+                                        <p className="text-neutral-600 text-sm mt-1">IATF16949 and ISO9001 certified manufacturing</p>
                                     </div>
                                 </div>
                             </div>
@@ -64,8 +65,8 @@ const FactoryStrengthSection = () => {
                                         <Wrench className="text-primary-600" size={22} />
                                     </div>
                                     <div>
-                                        <h3 className="text-base font-semibold text-neutral-900 uppercase tracking-wide">Precision Equipment</h3>
-                                        <p className="text-neutral-600 text-sm mt-1">Advanced CNC machines and testing instruments</p>
+                                        <h3 className="text-base font-semibold text-neutral-900 uppercase tracking-wide">Advanced Technologies</h3>
+                                        <p className="text-neutral-600 text-sm mt-1">HPDC, CNC, GDC, Painting & Assembly</p>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +74,7 @@ const FactoryStrengthSection = () => {
 
                         <div className="flex flex-wrap gap-4">
                             <a href="#" className="px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-medium rounded-sm transition-all shadow-md hover:shadow-lg flex items-center border border-primary-800">
-                                <span>Learn More</span>
+                                <span>Our Technologies</span>
                                 <ChevronRight size={18} className="ml-2" />
                             </a>
                             <a href="#" className="px-6 py-3 border border-neutral-300 hover:border-primary-600 text-neutral-700 hover:text-primary-600 font-medium rounded-sm transition-all flex items-center bg-white">
@@ -87,7 +88,7 @@ const FactoryStrengthSection = () => {
                     <div className="lg:col-span-6">
                         <div className="bg-white rounded-sm shadow-lg p-3 border border-neutral-200">
                             <div className="rounded-sm overflow-hidden relative group" onClick={() => setPlayPromoVideo(true)}>
-                                <img src={Banner} alt="CNC machining" className="w-full h-auto object-cover" />
+                                <img src={Banner} alt="CQS Manufacturing Facility" className="w-full h-auto object-cover" />
 
                                 {/* Technical overlay with diagonal pattern */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent opacity-80"></div>
@@ -96,7 +97,7 @@ const FactoryStrengthSection = () => {
                                 {/* Play button */}
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <button className="w-16 h-16 bg-neutral-900/50 backdrop-blur-sm border border-neutral-500 rounded-sm flex items-center justify-center transform transition-all duration-300 hover:scale-105 hover:bg-primary-600/80 group">
-                                        <Play className="text-white ml-1" size={25}    />
+                                        <Play className="text-white ml-1" size={25} />
                                     </button>
                                 </div>
 
@@ -104,10 +105,10 @@ const FactoryStrengthSection = () => {
                                 <div className="absolute bottom-0 left-0 w-full p-6 border-t border-l border-white/20">
                                     <h3 className="text-white text-lg font-bold uppercase tracking-wide flex items-center">
                                         <span className="h-4 w-1 bg-primary-500 mr-2 inline-block"></span>
-                                        Explore Our Manufacturing Process
+                                        One-Stop Manufacturing Services
                                     </h3>
                                     <p className="text-white/80 text-sm mt-2 ml-3">
-                                        Watch how our engineering team transforms concepts into precision parts
+                                        From die-casting to assembly, discover our comprehensive production capabilities
                                     </p>
                                 </div>
                             </div>
@@ -119,8 +120,8 @@ const FactoryStrengthSection = () => {
                                         <Cog className="text-primary-600" size={18} />
                                     </div>
                                     <div>
-                                        <div className="text-xs text-neutral-500 uppercase">Precision</div>
-                                        <div className="font-semibold">±0.01mm</div>
+                                        <div className="text-xs text-neutral-500 uppercase">Machine Range</div>
+                                        <div className="font-semibold">250-1,650 Tons</div>
                                     </div>
                                 </div>
                                 <div className="flex items-center p-2 border-r border-neutral-200">
@@ -128,8 +129,8 @@ const FactoryStrengthSection = () => {
                                         <Users className="text-primary-600" size={18} />
                                     </div>
                                     <div>
-                                        <div className="text-xs text-neutral-500 uppercase">Team</div>
-                                        <div className="font-semibold">20+ Engineers</div>
+                                        <div className="text-xs text-neutral-500 uppercase">Global Reach</div>
+                                        <div className="font-semibold">8+ Countries</div>
                                     </div>
                                 </div>
                                 <div className="flex items-center p-2">
@@ -138,7 +139,7 @@ const FactoryStrengthSection = () => {
                                     </div>
                                     <div>
                                         <div className="text-xs text-neutral-500 uppercase">Certified</div>
-                                        <div className="font-semibold">ISO 9001</div>
+                                        <div className="font-semibold">IATF16949</div>
                                     </div>
                                 </div>
                             </div>

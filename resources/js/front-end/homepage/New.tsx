@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Newspaper, ChevronRight, Rss, Grid, ExternalLink,
   Factory, Wrench, FileText, Calendar, Flag,
-  Lock, Award
+  Lock, Award, Recycle
 } from 'lucide-react';
 
 interface NewsProps {
@@ -26,17 +26,17 @@ const News: React.FC<NewsProps> = ({ className }) => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12" data-aos="fade-up">
           <div>
             <div className="inline-flex items-center bg-neutral-800/90 text-white px-4 py-2 rounded-sm mb-6 border-l-2 border-primary-600">
-              <span className="text-sm font-medium tracking-wider uppercase">Information Center</span>
+              <span className="text-sm font-medium tracking-wider uppercase">CQS News Center</span>
             </div>
 
             <h2 className="text-3xl font-bold text-neutral-900 mb-2 tracking-tight">
-              Technical <span className="text-primary-600">Updates</span> & Industry News
+              Die Casting <span className="text-primary-600">Innovation</span> & Industry Updates
             </h2>
 
             <div className="flex items-center space-x-2">
               <div className="w-8 h-0.5 bg-primary-600"></div>
               <div className="text-neutral-600 text-sm">
-                Industry Analysis · Technical Articles · Manufacturing Insights
+                Aluminum Technology · Sustainability Initiatives · Global Partnerships
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ const News: React.FC<NewsProps> = ({ className }) => {
                 {/* Technical reference badge */}
                 <div className="absolute top-3 left-3 bg-neutral-900/80 backdrop-blur-sm text-xs font-mono
                               text-white px-2 py-1 z-10 border-l border-primary-600">
-                  NEWS-052024-01
+                  CQS-NEWS-2024-05
                 </div>
 
                 <div className="absolute top-3 right-3 px-2 py-1 bg-primary-600/90 text-white text-xs
@@ -82,7 +82,7 @@ const News: React.FC<NewsProps> = ({ className }) => {
 
                 <img
                   src="/images/Material-3.jpg"
-                  alt="CNC Machining Center"
+                  alt="CQS Die Casting Facility"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
 
@@ -95,29 +95,29 @@ const News: React.FC<NewsProps> = ({ className }) => {
                 <div className="flex items-center mb-3">
                   <div className="flex items-center text-neutral-500 mr-3 text-xs">
                     <Calendar size={12} className="mr-1" />
-                    <span>2024-05-12</span>
+                    <span>2024-05-15</span>
                   </div>
                   <div className="text-xs px-2 py-0.5 bg-neutral-100 border border-neutral-200 text-neutral-800">
-                    EQUIPMENT UPGRADE
+                    FACILITY EXPANSION
                   </div>
                 </div>
 
                 <h3 className="text-xl font-bold text-neutral-900 mb-3 hover:text-primary-600 transition-colors">
-                  <a href="#">5-Axis CNC Machining Center Installed at Zhongsen Factory</a>
+                  <a href="#">CQS Expands High Pressure Die Casting Capacity with New 1,650 Ton Machine</a>
                 </h3>
 
                 <div className="h-0.5 w-16 bg-neutral-200 mb-3"></div>
 
                 <p className="text-neutral-600 text-sm mb-4 leading-relaxed">
-                  Our company has recently commissioned multiple high-precision 5-axis CNC machining centers,
-                  enhancing mold processing accuracy to ±0.01mm while improving production efficiency by 35%,
-                  significantly reducing lead times for automotive and motorcycle component manufacturing.
+                  CQS has expanded its manufacturing capabilities with the installation of a new 1,650 ton high-pressure
+                  die casting machine, increasing production capacity by 30% for large automotive structural components.
+                  This investment strengthens our position as a leading supplier to global automotive markets.
                 </p>
 
                 <a href="#" className="inline-flex items-center text-primary-600 hover:text-primary-500
                                    text-sm font-medium border-b border-transparent hover:border-primary-600
                                    pb-0.5 transition-all">
-                  <span>Technical specifications</span>
+                  <span>Read full announcement</span>
                   <ExternalLink size={14} className="ml-1" />
                 </a>
               </div>
@@ -133,7 +133,7 @@ const News: React.FC<NewsProps> = ({ className }) => {
                   <div className="flex-shrink-0 mr-4 relative">
                     <img
                       src="/images/Advanced.jpg"
-                      alt="New Technology Application"
+                      alt="Recycling Initiative"
                       className="w-24 h-24 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -142,17 +142,17 @@ const News: React.FC<NewsProps> = ({ className }) => {
                     <div className="flex items-center mb-2">
                       <div className="flex items-center text-neutral-500 text-xs">
                         <Calendar size={12} className="mr-1" />
-                        <span>2024-04-25</span>
+                        <span>2024-05-02</span>
                       </div>
                     </div>
 
                     <h3 className="text-base font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
-                      <a href="#">Advanced Surface Treatment Techniques for Aluminum Components</a>
+                      <a href="#">CQS Achieves 93% Aluminum Recycling Rate, Leading Sustainability Efforts</a>
                     </h3>
 
                     <p className="text-neutral-600 text-xs line-clamp-2">
-                      New developments in anodizing and powder coating technologies have enabled enhanced
-                      corrosion resistance and aesthetic finishes for precision aluminum components...
+                      Our sustainability initiatives have resulted in a record 93% aluminum recycling rate,
+                      significantly reducing our carbon footprint while maintaining high-quality standards...
                     </p>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ const News: React.FC<NewsProps> = ({ className }) => {
                   <div className="flex-shrink-0 mr-4 relative">
                     <img
                       src="/images/Aluminum.jpg"
-                      alt="Corporate Qualification"
+                      alt="IATF Certification"
                       className="w-24 h-24 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -174,17 +174,17 @@ const News: React.FC<NewsProps> = ({ className }) => {
                     <div className="flex items-center mb-2">
                       <div className="flex items-center text-neutral-500 text-xs">
                         <Calendar size={12} className="mr-1" />
-                        <span>2024-04-15</span>
+                        <span>2024-04-18</span>
                       </div>
                     </div>
 
                     <h3 className="text-base font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
-                      <a href="#">Zhongsen Achieves ISO 9001:2015 & IATF 16949 Certification</a>
+                      <a href="#">CQS Renews IATF 16949 Certification for Automotive Quality Excellence</a>
                     </h3>
 
                     <p className="text-neutral-600 text-xs line-clamp-2">
-                      Our company has successfully passed both ISO 9001:2015 quality management and
-                      IATF 16949 automotive industry certification, confirming our manufacturing processes...
+                      Our Vietnam manufacturing facility has successfully renewed its IATF 16949 certification,
+                      confirming our commitment to the highest quality standards in automotive component production...
                     </p>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ const News: React.FC<NewsProps> = ({ className }) => {
                   <div className="flex-shrink-0 mr-4 relative">
                     <img
                       src="/images/cnc.jpg"
-                      alt="Staff Training"
+                      alt="Global Distribution"
                       className="w-24 h-24 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -206,17 +206,17 @@ const News: React.FC<NewsProps> = ({ className }) => {
                     <div className="flex items-center mb-2">
                       <div className="flex items-center text-neutral-500 text-xs">
                         <Calendar size={12} className="mr-1" />
-                        <span>2024-03-21</span>
+                        <span>2024-03-25</span>
                       </div>
                     </div>
 
                     <h3 className="text-base font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
-                      <a href="#">Advanced CNC Programming Training for Technical Personnel</a>
+                      <a href="#">CQS Expands Distribution Network to Mexico and Southeast Asia</a>
                     </h3>
 
                     <p className="text-neutral-600 text-xs line-clamp-2">
-                      To enhance precision machining capabilities, our technical team participated in
-                      specialized CNC programming and CAM software training, focusing on complex geometries...
+                      In response to growing demand, CQS has strengthened its global distribution capabilities,
+                      opening new logistics channels in Mexico and expanding our presence in Southeast Asia...
                     </p>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ const News: React.FC<NewsProps> = ({ className }) => {
                   <div className="flex-shrink-0 mr-4 relative">
                     <img
                       src="/images/Material-2.jpg"
-                      alt="Industry Exhibition"
+                      alt="Auto Parts Exhibition"
                       className="w-24 h-24 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -238,17 +238,17 @@ const News: React.FC<NewsProps> = ({ className }) => {
                     <div className="flex items-center mb-2">
                       <div className="flex items-center text-neutral-500 text-xs">
                         <Calendar size={12} className="mr-1" />
-                        <span>2024-03-10</span>
+                        <span>2024-03-12</span>
                       </div>
                     </div>
 
                     <h3 className="text-base font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
-                      <a href="#">Zhongsen Showcases Aluminum Components at 2024 Shanghai Auto Parts Exhibition</a>
+                      <a href="#">CQS Showcases New Lightweight Components at Vietnam AutoExpo 2024</a>
                     </h3>
 
                     <p className="text-neutral-600 text-xs line-clamp-2">
-                      Our company exhibited our latest lightweight aluminum die-cast automotive and motorcycle
-                      components at the 2024 Shanghai Auto Parts Exhibition, featuring innovative designs...
+                      CQS exhibited our latest aluminum die-cast automotive and motorcycle components at
+                      Vietnam AutoExpo 2024, featuring our innovative gravity die casting technology and lightweight designs...
                     </p>
                   </div>
                 </div>
@@ -269,23 +269,23 @@ const News: React.FC<NewsProps> = ({ className }) => {
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      New high-tolerance aluminum alloy components for EV battery systems
+                      CQS expands CNC capacity with 5 new high-precision machines
                     </a>
-                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">05-12</span>
+                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">05-20</span>
                   </li>
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      Zhongsen achieves IATF 16949 certification for automotive production
+                      New aluminum EV battery housing components enter production
                     </a>
-                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">04-21</span>
+                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">04-28</span>
                   </li>
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      Technical staff complete advanced CAM programming certification
+                      CQS reaches 5 million parts milestone for key automotive client
                     </a>
-                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">03-21</span>
+                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">04-15</span>
                   </li>
                 </ul>
               </div>
@@ -293,8 +293,8 @@ const News: React.FC<NewsProps> = ({ className }) => {
               {/* Industry News */}
               <div className="bg-white border border-neutral-200 shadow-sm p-5">
                 <h4 className="font-bold text-neutral-900 mb-3 flex items-center">
-                  <Factory size={16} className="text-primary-600 mr-2" />
-                  Industry Insights
+                  <Recycle size={16} className="text-primary-600 mr-2" />
+                  Sustainability News
                 </h4>
 
                 <div className="h-0.5 w-full bg-neutral-100 mb-4"></div>
@@ -303,23 +303,23 @@ const News: React.FC<NewsProps> = ({ className }) => {
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      2024 Aluminum Die Casting Market Analysis & Manufacturing Trends
+                      CQS implements advanced aluminum recycling system at Vietnam facility
                     </a>
                     <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">05-10</span>
                   </li>
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      New Regulatory Standards for Precision Manufacturing Components
+                      Energy-efficient die casting processes reduce carbon footprint by 18%
                     </a>
-                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">04-15</span>
+                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">04-20</span>
                   </li>
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      Global Aluminum Supply Chain Developments for Auto Parts
+                      Solar panel installation completed at CQS headquarters
                     </a>
-                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">04-02</span>
+                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">03-28</span>
                   </li>
                 </ul>
               </div>
@@ -337,23 +337,23 @@ const News: React.FC<NewsProps> = ({ className }) => {
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      High-Pressure Die Casting Process Parameters for Thin-Wall Components
+                      Comparing HPDC vs. GDC technologies for automotive applications
                     </a>
                     <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">05-17</span>
                   </li>
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      Metallurgical Analysis of New Aluminum-Magnesium Alloys for Lightweight Parts
+                      Optimal process parameters for ADC12 aluminum alloy die casting
                     </a>
                     <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">05-03</span>
                   </li>
                   <li className="flex items-center group">
                     <ChevronRight size={12} className="text-primary-600 mr-2 flex-shrink-0" />
                     <a href="#" className="text-neutral-700 text-sm group-hover:text-primary-600 transition-colors line-clamp-1">
-                      Surface Treatment Methods for Extending Die Casting Tool Life
+                      Advanced surface treatments for aluminum motorcycle components
                     </a>
-                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">04-25</span>
+                    <span className="text-xs text-neutral-500 ml-auto flex-shrink-0">04-22</span>
                   </li>
                 </ul>
               </div>

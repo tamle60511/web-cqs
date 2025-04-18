@@ -14,20 +14,11 @@ interface NavItem {
 
 const Header: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-    const [scrolled, setScrolled] = useState<boolean>(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
     // Get current URL path from Inertia
     const { url } = usePage();
     const currentPath = url;
-
-    useEffect(() => {
-      const handleScroll = () => {
-        setScrolled(window.scrollY > 10);
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     // Close mobile menu when path changes
     useEffect(() => {
@@ -87,17 +78,27 @@ const Header: React.FC = () => {
     ];
 
     return (
-      <header className={`sticky top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
-        <TopBar />
-        <MainNavigation
-          navItems={navItems}
-          mobileMenuOpen={mobileMenuOpen}
-          activeDropdown={activeDropdown}
-          toggleMobileMenu={toggleMobileMenu}
-          handleDropdownToggle={handleDropdownToggle}
-          currentPath={currentPath}
-        />
-      </header>
+      <>
+        {/* Fixed TopBar */}
+        <div >
+          <TopBar />
+        </div>
+
+        {/* Content container with padding to push below fixed TopBar */}
+        <div >
+          {/* MainNavigation that scrolls with the page (not sticky) */}
+          <MainNavigation
+            navItems={navItems}
+            mobileMenuOpen={mobileMenuOpen}
+            activeDropdown={activeDropdown}
+            toggleMobileMenu={toggleMobileMenu}
+            handleDropdownToggle={handleDropdownToggle}
+            currentPath={currentPath}
+          />
+
+          {/* Rest of your page content would continue here */}
+        </div>
+      </>
     );
   };
 

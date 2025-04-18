@@ -25,31 +25,31 @@ export default function MetalsSection({ metals }: MetalsSectionProps) {
   // Default metals data if not provided via props with added technical specs
   const defaultMetals: Metal[] = [
     {
-      name: 'ALUMINUM',
-      description: 'Lightweight & High Thermal Conductivity',
+      name: 'ADC12',
+      description: 'Standard Aluminum Die Casting Alloy for Automotive Components',
       image: '/images/Material-1.jpg',
-      alloyCode: 'A380/ADC12',
+      alloyCode: 'JIS ADC12/A383',
       density: '2.7 g/cm³',
-      meltPoint: '660°C',
-      strength: '310 MPa'
+      meltPoint: '575°C',
+      strength: '330 MPa'
     },
     {
-      name: 'MAGNESIUM',
-      description: 'Exceptional Strength-to-Weight Ratio',
+      name: 'A356',
+      description: 'Premium Aluminum Alloy for Gravity Die Casting Applications',
       image: '/images/Material-2.jpg',
-      alloyCode: 'AZ91D',
-      density: '1.8 g/cm³',
-      meltPoint: '650°C',
-      strength: '230 MPa'
+      alloyCode: 'AlSi7Mg0.3',
+      density: '2.67 g/cm³',
+      meltPoint: '615°C',
+      strength: '290 MPa'
     },
     {
-      name: 'ZINC',
-      description: 'Superior Detail & Surface Finish',
+      name: 'A380',
+      description: 'High Strength Aluminum for Complex Components',
       image: '/images/Material-3.jpg',
-      alloyCode: 'ZA-8/ZAMAK 3',
-      density: '6.7 g/cm³',
-      meltPoint: '420°C',
-      strength: '275 MPa'
+      alloyCode: 'AlSi8Cu3Fe',
+      density: '2.74 g/cm³',
+      meltPoint: '595°C',
+      strength: '320 MPa'
     }
   ];
 
@@ -70,49 +70,50 @@ export default function MetalsSection({ metals }: MetalsSectionProps) {
           {/* Left Column - Text Content */}
           <div className="lg:col-span-4">
             <div className="inline-flex items-center bg-neutral-800/90 px-4 py-2 rounded-sm mb-6 border-l-2 border-primary-600">
-              <span className="text-sm font-medium tracking-wider uppercase">Material Science</span>
+              <span className="text-sm font-medium tracking-wider uppercase">Aluminum Expertise</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-              Advanced <span className="text-primary-500">Alloys</span> for Precision Components
+              Premium <span className="text-primary-500">Aluminum</span> Alloys for Superior Parts
             </h2>
 
             <div className="h-0.5 w-16 bg-neutral-700 mb-6"></div>
 
             <p className="text-neutral-300 mb-8 leading-relaxed">
-              Our engineering team selects and formulates the optimal alloy composition for each application,
-              balancing mechanical properties, thermal performance, and manufacturing requirements to
-              deliver superior motorcycle and automotive components.
+              CQS specializes in aluminum die-casting technologies with comprehensive capabilities in
+              High Pressure Die Casting (HPDC) and Gravity Die Casting (GDC). We select optimal alloys
+              for each application to deliver lightweight, durable components for automotive and
+              motorcycle manufacturers.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-8 text-sm">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-primary-500 mr-2"></div>
-                <span className="text-neutral-300">Weight Optimization</span>
+                <span className="text-neutral-300">Lightweight Solutions</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-primary-500 mr-2"></div>
-                <span className="text-neutral-300">Thermal Conductivity</span>
+                <span className="text-neutral-300">High Durability</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-primary-500 mr-2"></div>
-                <span className="text-neutral-300">Corrosion Resistance</span>
+                <span className="text-neutral-300">Recyclable Materials</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-primary-500 mr-2"></div>
-                <span className="text-neutral-300">Mechanical Strength</span>
+                <span className="text-neutral-300">Precision Tolerances</span>
               </div>
             </div>
 
             <Link
-              href="/materials"
+              href="/technologies"
               className="inline-flex items-center justify-center px-6 py-3
                        bg-gradient-to-r from-primary-600 to-primary-700 text-white
                        font-medium tracking-wide rounded-sm border border-primary-700
                        hover:from-primary-700 hover:to-primary-800 transition-all
                        shadow-lg hover:shadow-primary-900/30 group"
             >
-              Explore Material Capabilities
+              Our Die Casting Technologies
               <ExternalLink className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -148,7 +149,7 @@ function MetalCard({ name, description, image, alloyCode, density, meltPoint, st
       <div className="relative">
         {/* Technical reference number */}
         <div className="absolute top-3 left-3 font-mono text-xs text-white/60 z-20">
-          MTL-{(index + 1).toString().padStart(2, '0')}
+          CQS-{(index + 1).toString().padStart(2, '0')}
         </div>
 
         <div className="relative overflow-hidden h-48">
@@ -195,10 +196,10 @@ function MetalCard({ name, description, image, alloyCode, density, meltPoint, st
         </div>
 
         <Link
-          href={`/materials/${name.toLowerCase()}`}
+          href={`/alloys/${name.toLowerCase()}`}
           className="inline-flex items-center text-primary-500 font-medium hover:text-primary-400 text-sm tracking-wide"
         >
-          Technical Datasheet
+          View Applications
           <ChevronRight className="ml-1 h-4 w-4" />
         </Link>
       </div>
