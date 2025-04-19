@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, FileDown, Mail, ExternalLink, Clock, Terminal, Target } from 'lucide-react';
+import { ArrowRight, FileDown, Mail, ExternalLink, Clock, Terminal, Target, Zap, Car } from 'lucide-react';
 
 interface CTAButton {
   text: string;
@@ -21,22 +21,22 @@ interface CTASectionProps {
 
 const CTASection: React.FC<CTASectionProps> = ({
   className = '',
-  title = <>Partner with a <span className="text-primary-500">Leading Manufacturer</span></>,
-  description = 'Discover how CQS can help you optimize your component design, streamline production, and deliver high-quality precision aluminum parts for your automotive or motorcycle application.',
+  title = <>Aluminum Die Casting <span className="text-primary-500">Excellence</span></>,
+  description = 'From design engineering to high-volume production, partner with CQS for die cast aluminum components that meet the most demanding automotive industry standards with ±0.01mm precision, superior surface quality, and accelerated time-to-market.',
   buttons = [
     {
-      text: 'Request a Consultation',
-      url: '#',
+      text: 'Request Engineering Consultation',
+      url: '/contact',
       isPrimary: true,
-      icon: <Mail size={16} />,
-      reference: 'REQ-CONSULT'
+      icon: <Zap size={16} />,
+      reference: 'ENG-CONSULT'
     },
     {
-      text: 'Download Company Profile',
-      url: '#',
+      text: 'Download Technical Capabilities',
+      url: '/downloads/technical-catalog.pdf',
       isPrimary: false,
       icon: <FileDown size={16} />,
-      reference: 'DOC-PROFILE'
+      reference: 'TECH-SPEC'
     }
   ],
   companyName = 'CQS',
@@ -47,7 +47,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   const formattedDescription = description.replace(/CQS/g, companyName);
 
   // Generate reference code if not provided
-  const generatedRefCode = referenceCode || `${companyName}-CTA-${new Date().getFullYear()}`;
+  const generatedRefCode = referenceCode || `${companyName}-MFG-${new Date().getFullYear()}`;
 
   // Technical patterns
   const gridPatternClass = "bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]";
@@ -98,7 +98,7 @@ const CTASection: React.FC<CTASectionProps> = ({
           {/* Technical document code */}
           <div className="inline-flex items-center bg-neutral-800/80 text-white px-3 py-1 mb-8 border-l-2 border-primary-600 text-xs font-mono">
             <Terminal size={12} className="mr-2 text-primary-500" />
-            <span>ACTION.REQUEST.{new Date().getFullYear()}</span>
+            <span>PRECISION.MANUFACTURING.{new Date().getFullYear()}</span>
           </div>
 
           <h2 className="text-3xl font-bold mb-6 relative inline-block">
@@ -153,9 +153,9 @@ const CTASection: React.FC<CTASectionProps> = ({
           {/* Technical footer */}
           <div className="mt-12 text-xs font-mono text-neutral-600 flex items-center justify-center">
             <Clock size={12} className="mr-1 text-primary-500/50" />
-            <span>RESPONSE TIME: 24-48 HRS</span>
+            <span>RESPONSE TIME: WITHIN 24 HRS</span>
             <span className="mx-2">|</span>
-            <span>REF: {generatedRefCode}</span>
+            <span>IATF 16949 CERTIFIED</span>
           </div>
         </div>
       </div>
@@ -166,7 +166,7 @@ const CTASection: React.FC<CTASectionProps> = ({
           <div className="w-4 h-4 border border-neutral-600 rounded-full flex items-center justify-center mr-2">
             <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
           </div>
-          <span>{companyName}.CONTACT.POINT</span>
+          <span>{companyName}.EST.2002</span>
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Activity, Check } from 'lucide-react';
 
@@ -10,7 +9,7 @@ interface AdvantageItem {
 }
 
 // Interface for component props
-interface PaintingAdvantagesProps {
+interface HPDCAdvantagesProps {
   id?: string;
   className?: string;
 }
@@ -31,39 +30,39 @@ const AdvantageListItem: React.FC<AdvantageItem> = ({ title, description }) => (
 // Advantages data
 const advantages: AdvantageItem[] = [
   {
-    id: "corrosion-protection",
-    title: "Superior Corrosion Protection",
-    description: "Industrial coatings provide excellent corrosion resistance, extending component lifespan even in harsh environments."
+    id: "dimensional-accuracy",
+    title: "Superior Dimensional Accuracy",
+    description: "Our HPDC process achieves precision tolerances of ±0.05mm, ensuring perfect component fitment and assembly in automotive applications while reducing post-processing requirements."
   },
   {
-    id: "durability",
-    title: "Enhanced Durability",
-    description: "Painted finishes resist scratches, impacts, chemicals, UV radiation, and weathering for prolonged product life."
+    id: "complex-geometry",
+    title: "Complex Geometry Capability",
+    description: "High pressure die casting enables intricate designs with internal channels, undercuts, and complex features that would be impossible or cost-prohibitive with other manufacturing processes."
   },
   {
-    id: "aesthetic-versatility",
-    title: "Aesthetic Versatility",
-    description: "Unlimited color options, textures, and gloss levels for customized appearance to match brand identity and design requirements."
+    id: "thin-wall-capability",
+    title: "Thin-Wall Design & Weight Reduction",
+    description: "Our advanced HPDC technology produces wall thicknesses as thin as 0.8mm while maintaining structural integrity, supporting automotive lightweighting initiatives for improved fuel efficiency and emissions reduction."
   },
   {
-    id: "environmental-compliance",
-    title: "Environmental Compliance",
-    description: "Modern coating systems meet stringent environmental regulations with low-VOC or zero-VOC formulations."
+    id: "production-efficiency",
+    title: "High Volume Production Efficiency",
+    description: "Optimized cycle times as low as 45 seconds and high automation levels ensure consistent quality and cost-effectiveness for high-volume automotive component production with minimal variation."
   },
   {
-    id: "functional-properties",
-    title: "Functional Properties",
-    description: "Specialized coatings offer additional functionalities like electrical insulation, thermal resistance, or antimicrobial properties."
+    id: "material-properties",
+    title: "Enhanced Material Properties",
+    description: "The high-pressure solidification process creates fine grain structure with excellent mechanical properties, including tensile strength up to 330 MPa and yield strength up to 165 MPa for aluminum alloys."
   },
   {
-    id: "cost-effective",
-    title: "Cost-Effective Protection",
-    description: "Extends product lifespan and reduces maintenance costs, providing excellent long-term value compared to unprotected parts."
+    id: "sustainability",
+    title: "Sustainability & Recyclability",
+    description: "Our aluminum die casting process achieves 93% material recycling efficiency and requires 75% less energy compared to steel components, supporting automotive sustainability and environmental compliance targets."
   }
 ];
 
-const TechnologyAdvantages: React.FC<PaintingAdvantagesProps> = ({
-  id = "painting-advantages",
+const TechnologyAdvantages: React.FC<HPDCAdvantagesProps> = ({
+  id = "hpdc-advantages",
   className = ""
 }) => {
   return (
@@ -81,7 +80,7 @@ const TechnologyAdvantages: React.FC<PaintingAdvantagesProps> = ({
             </div>
 
             <h2 className="text-3xl font-bold text-neutral-900 mb-4 tracking-tight text-center">
-              Key <span className="text-primary-600">Advantages</span> of Industrial Painting
+              Key <span className="text-primary-600">Advantages</span> of High Pressure Die Casting
             </h2>
 
             <div className="w-20 h-0.5 bg-neutral-300 mb-6 relative">

@@ -1,4 +1,4 @@
-import Layout from '@/front-end/Layout/Layout'
+import Layout from '@/front-end/layout/Layout'
 import TechnicalSpecifications from '@/front-end/technologies/Specification';
 import Technologies from '@/front-end/technologies/Technologies';
 import TechnologyAdvantages from '@/front-end/technologies/TechnologyAdvantage';

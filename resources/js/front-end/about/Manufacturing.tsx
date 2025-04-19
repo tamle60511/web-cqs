@@ -1,4 +1,4 @@
-import { AlertCircle, ArrowRight, Cog, Cpu, Ruler, Shield, Target, Wrench, Zap } from 'lucide-react';
+import { AlertCircle, ArrowRight, Cog, Cpu, Ruler, Shield, Target, Wrench, Zap, Truck, BarChart2 } from 'lucide-react';
 import React from 'react';
 
 interface Capability {
@@ -25,54 +25,54 @@ const Manufacturing: React.FC<ManufacturingProps> = ({
     className = '',
     title = (
         <>
-            Manufacturing <span className="text-primary-600">Capabilities</span>
+            Die Casting <span className="text-primary-600">Excellence</span>
         </>
     ),
-    subtitle = 'Technical Expertise',
-    description = 'Our vertically integrated manufacturing facility combines advanced technologies and processes to deliver complete solutions from concept to finished component.',
+    subtitle = 'Manufacturing Capabilities',
+    description = 'Our integrated manufacturing facility combines advanced die casting technology, precision CNC machining, and comprehensive surface treatments to provide a complete solution from raw material to finished components.',
     capabilities = [
         {
-            id: 'CAP-01',
-            title: 'Aluminum Die Casting',
+            id: 'HPDC',
+            title: 'High Pressure Die Casting',
             image: '/images/Aluminum.jpg',
             features: [
-                'High-pressure die casting up to 1,600 tons',
-                'Multi-cavity tooling for efficient production',
-                'Aluminum alloys: ADC12, A380, A356, A413',
-                'Component weight range: 50g to 10kg',
+                'Die casting machines from 250 to 1,650 tons',
+                'Aluminum alloys: ADC12, A383, A360, A380',
+                'Wall thickness capability down to 0.8mm',
+                'Multi-cavity tooling for high-volume production',
             ],
-            precision: '±0.1mm',
-            capacity: '500,000 units/year',
+            precision: '±0.05mm',
+            capacity: '2M+ units/year',
         },
         {
-            id: 'CAP-02',
+            id: 'CNC',
             title: 'CNC Precision Machining',
-            image: 'https://images.unsplash.com/photo-1717386255773-a456c611dc4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            image: '/images/cnc.jpg',
             features: [
-                '25 CNC machining centers including 5-axis',
-                'High-precision machining to ±0.01mm tolerance',
-                'Advanced CAM programming capabilities',
-                'Complex geometry and thin-wall machining',
+                '40+ CNC machining centers (3, 4 & 5-axis)',
+                'High-precision tolerance capability to ±0.01mm',
+                'In-house fixture design and fabrication',
+                'Advanced CMM inspection systems',
             ],
             precision: '±0.01mm',
-            capacity: '750,000 units/year',
+            capacity: '3M+ units/year',
         },
         {
-            id: 'CAP-03',
-            title: 'Surface Treatment',
-            image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+            id: 'FIN',
+            title: 'Surface Treatment & Assembly',
+            image: '/images/cnc.jpg',
             features: [
-                'Anodizing line (Type II and Type III)',
-                'Powder coating with automated application',
-                'E-coating for corrosion protection',
-                'Mechanical finishing: polishing, bead blasting',
+                'Anodizing (Type II and III) with multiple color options',
+                'Powder coating & wet painting with robotic application',
+                'Shot blasting and mechanical finishing',
+                'Semi-automated and manual assembly lines',
             ],
             precision: 'Class A surface',
-            capacity: '900,000 units/year',
+            capacity: '2.5M+ units/year',
         },
     ],
-    buttonText = 'View All Capabilities',
-    buttonLink = '#',
+    buttonText = 'Contact Our Engineers',
+    buttonLink = '/contact',
     companyName = 'CQS',
 }) => {
     // Technical patterns
@@ -85,9 +85,9 @@ const Manufacturing: React.FC<ManufacturingProps> = ({
 
     // Icons for capabilities (you can map these to specific capability IDs if needed)
     const capabilityIcons = {
-        'CAP-01': <Zap size={16} className="text-primary-600" />,
-        'CAP-02': <Wrench size={16} className="text-primary-600" />,
-        'CAP-03': <Shield size={16} className="text-primary-600" />,
+        'HPDC': <Zap size={16} className="text-primary-600" />,
+        'CNC': <Wrench size={16} className="text-primary-600" />,
+        'FIN': <Shield size={16} className="text-primary-600" />,
     };
 
     // Icons for feature lists (you can use these randomly or map to specific features)
@@ -95,7 +95,7 @@ const Manufacturing: React.FC<ManufacturingProps> = ({
         <Target size={12} className="text-primary-500" />,
         <Cog size={12} className="text-primary-500" />,
         <Cpu size={12} className="text-primary-500" />,
-        <AlertCircle size={12} className="text-primary-500" />,
+        <BarChart2 size={12} className="text-primary-500" />,
     ];
 
     return (
@@ -130,22 +130,21 @@ const Manufacturing: React.FC<ManufacturingProps> = ({
                     <div className="relative mb-8 h-0.5 w-20 bg-neutral-300">
                         <div className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 transform border border-neutral-300"></div>
                     </div>
-                    // Thay thế đoạn mã trên bằng:
                     <div className="relative">
                         <p className="mb-12 max-w-2xl text-center text-neutral-600">{description}</p>
                         <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 transform font-mono text-xs whitespace-nowrap text-neutral-400">
                             <span className="mr-2">
-                                REF: {companyName}-CAP-{currentYear}
+                                REF: {companyName}-MFG-{currentYear}
                             </span>
                             <span className="mx-2 inline-block h-px w-16 bg-neutral-300 align-middle"></span>
-                            <span>VERSION 1.2</span>
+                            <span>IATF 16949 CERTIFIED</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Blueprint-style technical detail */}
                 <div className="relative mb-10 h-px w-full bg-neutral-200">
-                    <div className="absolute -top-3 left-0 font-mono text-xs text-neutral-500">CAPABILITIES.INDEX</div>
+                    <div className="absolute -top-3 left-0 font-mono text-xs text-neutral-500">PROCESS.INDEX</div>
                     <div className="absolute -top-3 right-0 font-mono text-xs text-neutral-500">PRECISION.SPECS</div>
                     {capabilities.map((capability, index) => (
                         <div
@@ -220,7 +219,7 @@ const Manufacturing: React.FC<ManufacturingProps> = ({
                             <div className="border-t border-neutral-200 p-6">
                                 {/* Technical specification header */}
                                 <div className="mb-3 flex items-center justify-between">
-                                    <div className="text-xs font-medium tracking-wider text-neutral-500 uppercase">Process Specifications</div>
+                                    <div className="text-xs font-medium tracking-wider text-neutral-500 uppercase">Technical Specifications</div>
                                     <div className="font-mono text-xs text-neutral-400">{capability.id}.SPECS</div>
                                 </div>
 
@@ -271,7 +270,7 @@ const Manufacturing: React.FC<ManufacturingProps> = ({
 
                     {/* Technical reference number */}
                     <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 transform font-mono text-xs text-neutral-500">
-                        DOC.{companyName}.CAP.{currentYear}
+                        DOC.{companyName}.MFG.{currentYear}
                     </div>
                 </div>
             </div>

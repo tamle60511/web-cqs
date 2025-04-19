@@ -1,5 +1,5 @@
 import React from 'react'
-import DesktopNavItem from './DesktopNavItem';
+import DesktopNavItem from '../Navbar/DesktopNavItem';
 import { Search } from 'lucide-react';
 
 // Types and Interfaces

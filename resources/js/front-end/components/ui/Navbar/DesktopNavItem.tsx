@@ -1,7 +1,7 @@
 import { Link } from '@inertiajs/react';
 import { ChevronDown } from 'lucide-react';
 import React from 'react'
-import DropdownMenu from './ui/DropdownMenu';
+import DropdownMenu from './DropdownMenu';
 
 
 export interface DropdownItem {

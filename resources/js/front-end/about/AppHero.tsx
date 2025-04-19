@@ -5,7 +5,7 @@ interface CompanyHeroProps {
   companyName?: string;
   yearsInBusiness?: number;
   employeeCount?: number;
-  clientCount?: number;
+  globalMarkets?: number;
   facilityImageUrl?: string;
   cncImageUrl?: string;
   industry?: string;
@@ -16,14 +16,12 @@ interface CompanyHeroProps {
 const CompanyHero: React.FC<CompanyHeroProps> = ({
   className = '',
   companyName = 'CQS',
-  yearsInBusiness = 25,
+  yearsInBusiness = 22,
   employeeCount = 1000,
-  clientCount = 50,
+  globalMarkets = 8,
   facilityImageUrl = '/images/aboutcnc.jpg',
   cncImageUrl = '/images/cnc.jpg',
-  industry = 'Automotive & Motorcycle Components',
   location = 'Vietnam',
-  facilitySize = '15,000 sq.m'
 }) => {
   // Technical diagonal pattern CSS class
   const diagonalPatternClass = "bg-[linear-gradient(45deg,#000_25%,transparent_25%,transparent_50%,#000_50%,#000_75%,transparent_75%,transparent)] bg-[length:8px_8px]";
@@ -57,20 +55,20 @@ const CompanyHero: React.FC<CompanyHeroProps> = ({
           {/* Left Side: Company Info - 4 cols on desktop */}
           <div className="md:col-span-4">
             <div className="inline-flex items-center bg-primary-600/20 px-4 py-2 border-l-2 border-primary-600 mb-6">
-              <span className="text-sm font-medium tracking-wider uppercase">About {companyName}</span>
+              <span className="text-sm font-medium tracking-wider uppercase">Our Story</span>
             </div>
 
             <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              Precision <span className="text-primary-500">Aluminum</span><br/>
-              Manufacturing
+              <span className="text-primary-500">Creativity</span>, Quality<br/>
+              & <span className="text-primary-500">Sustainability</span>
             </h1>
 
             <div className="w-20 h-0.5 bg-primary-600 mb-8"></div>
 
             <p className="text-neutral-300 text-base mb-8 leading-relaxed">
-              Since 2005, {companyName} has been a leading manufacturer of high-precision aluminum components for the
-              automotive and motorcycle industries, delivering exceptional quality with advanced die-casting and
-              CNC machining technologies.
+              Founded in 2002, {companyName} has established itself as a premier die casting specialist, delivering
+              high-precision aluminum components through our advanced HPDC and GDC technologies, complemented by
+              state-of-the-art CNC machining capabilities.
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-8">
@@ -83,15 +81,15 @@ const CompanyHero: React.FC<CompanyHeroProps> = ({
                 <div className="text-xs text-neutral-400 uppercase tracking-wider">Employees</div>
               </div>
               <div className="border border-neutral-700 p-3 bg-neutral-800/50 group hover:bg-neutral-800 transition-colors duration-300">
-                <div className="text-2xl font-bold text-primary-500 mb-1 group-hover:text-primary-400 transition-colors">{clientCount}+</div>
-                <div className="text-xs text-neutral-400 uppercase tracking-wider">Clients</div>
+                <div className="text-2xl font-bold text-primary-500 mb-1 group-hover:text-primary-400 transition-colors">{globalMarkets}+</div>
+                <div className="text-xs text-neutral-400 uppercase tracking-wider">Countries</div>
               </div>
             </div>
 
             {/* Technical specification badge */}
             <div className="hidden md:flex items-center bg-neutral-800/70 border border-neutral-700 p-3 text-sm">
-              <div className="text-primary-500 text-xs font-mono mr-2">REF:</div>
-              <div className="text-neutral-300">{industry} Manufacturer</div>
+              <div className="text-primary-500 text-xs font-mono mr-2">CERT:</div>
+              <div className="text-neutral-300">IATF 16949 | ISO 9001:2015</div>
             </div>
           </div>
 
@@ -116,7 +114,7 @@ const CompanyHero: React.FC<CompanyHeroProps> = ({
               {/* Technical reference badge */}
               <div className="absolute top-4 right-4 bg-neutral-900/80 backdrop-blur-sm text-xs font-mono text-white px-2 py-1 z-10 border-r border-primary-600 flex items-center">
                 <span className="text-primary-500 mr-1">ID:</span>
-                <span>HQ-FACILITY-01</span>
+                <span>CQS-FACILITY</span>
               </div>
 
               {/* Main Facility Image */}
@@ -134,9 +132,9 @@ const CompanyHero: React.FC<CompanyHeroProps> = ({
               <div className="absolute bottom-0 left-0 right-0 bg-neutral-900/80 backdrop-blur-sm py-3 px-4 border-t border-neutral-700">
                 <div className="flex items-center">
                   <div className="w-1 h-6 bg-primary-600 mr-3"></div>
-                  <div>
-                    <div className="text-white font-medium">{companyName} Headquarters & Manufacturing Center</div>
-                    <div className="text-neutral-400 text-sm">{location} | {facilitySize} Integrated Production Facility</div>
+                  <div className='lg:pl-26'>
+                    <div className="text-white font-medium">Advanced Die Casting Manufacturing Center</div>
+                    <div className="text-neutral-400 text-sm">{location} | 250-1,650 Ton Die Casting Machines</div>
                   </div>
                 </div>
               </div>
@@ -153,7 +151,7 @@ const CompanyHero: React.FC<CompanyHeroProps> = ({
               <div className="absolute bottom-0 left-0 right-0 bg-neutral-900/80 py-1 px-2 text-xs text-white border-t border-neutral-700/50">
                 <div className="flex items-center">
                   <div className="w-0.5 h-3 bg-primary-600 mr-1.5"></div>
-                  <span>CNC Center</span>
+                  <span>High-Precision CNC</span>
                 </div>
               </div>
             </div>
@@ -165,7 +163,7 @@ const CompanyHero: React.FC<CompanyHeroProps> = ({
             <div className="absolute -bottom-4 right-8 text-xs font-mono text-neutral-500 hidden md:block">
               <div className="flex items-center">
                 <div className="w-3 h-0.5 bg-neutral-500 mr-1"></div>
-                <span>500px</span>
+                <span>93% Recycling Rate</span>
               </div>
             </div>
           </div>

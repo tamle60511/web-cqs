@@ -1,5 +1,5 @@
 import React from 'react';
-import { Monitor, Zap, Users, GitBranch, Shield, Target, Code, Ruler } from 'lucide-react';
+import { Lightbulb, BadgeCheck, Recycle, Shield, Target, Ruler } from 'lucide-react';
 
 interface CoreValue {
   title: string;
@@ -19,29 +19,29 @@ interface CoreValuesProps {
 
 const CoreValues: React.FC<CoreValuesProps> = ({
   className = '',
-  sectionTitle = 'Our Principles',
-  heading = <>Core <span className="text-primary-600">Values</span></>,
+  sectionTitle = 'Company Values',
+  heading = <>The <span className="text-primary-600">CQS</span> Foundation</>,
   values = [
     {
-      title: 'Precision Excellence',
-      description: 'We hold ourselves to the highest standards of precision, ensuring every component meets exacting tolerances. Our commitment to excellence drives continuous improvement in processes, technology, and quality control.',
-      icon: <Monitor className="text-primary-600" size={20} />,
-      id: 'VAL-01',
+      title: 'Creativity',
+      description: 'We embrace innovative thinking in every aspect of our operation, from engineering solutions to manufacturing processes. Our creative approach enables us to design lightweight aluminum components that solve complex challenges and drive advancement in the automotive industry.',
+      icon: <Lightbulb className="text-primary-600" size={20} />,
+      id: 'CRE',
       priority: 95
     },
     {
-      title: 'Innovation Focus',
-      description: 'We embrace innovation in materials, design, and manufacturing processes. By staying at the forefront of technological advancements, we develop solutions that anticipate future industry needs and challenges.',
-      icon: <Zap className="text-primary-600" size={20} />,
-      id: 'VAL-02',
-      priority: 90
+      title: 'Quality',
+      description: 'We maintain unwavering commitment to precision and excellence, with tolerances as precise as ±0.01mm. Our IATF 16949 and ISO 9001:2015 certified processes ensure consistent quality control across our integrated manufacturing operation, from die casting to final assembly.',
+      icon: <BadgeCheck className="text-primary-600" size={20} />,
+      id: 'QUA',
+      priority: 98
     },
     {
-      title: 'Collaborative Success',
-      description: 'We believe in fostering meaningful partnerships with customers, suppliers, and employees. Through open communication and shared goals, we create collaborative environments that lead to mutual growth and success.',
-      icon: <Users className="text-primary-600" size={20} />,
-      id: 'VAL-03',
-      priority: 85
+      title: 'Sustainability',
+      description: 'We prioritize environmental responsibility through our 93% aluminum recycling program and energy-efficient manufacturing processes. Our ISO 14001:2015 certified environmental management system guides our commitment to producing lightweight components that contribute to fuel efficiency and emissions reduction.',
+      icon: <Recycle className="text-primary-600" size={20} />,
+      id: 'SUS',
+      priority: 90
     }
   ],
   companyName = 'CQS'
@@ -108,7 +108,7 @@ const CoreValues: React.FC<CoreValuesProps> = ({
           {/* Technical reference number */}
           <div className="text-xs text-neutral-500 font-mono flex items-center">
             <span className="mr-2">DOC</span>
-            <span className="text-primary-500 mr-2">{companyName}-PRINCIPLES-{currentYear}</span>
+            <span className="text-primary-500 mr-2">{companyName}-VALUES-{currentYear}</span>
             <div className="w-6 h-px bg-neutral-300"></div>
           </div>
         </div>
@@ -188,8 +188,8 @@ const CoreValues: React.FC<CoreValuesProps> = ({
         {/* Technical footer */}
         <div className="mt-12 text-center">
           <div className="inline-flex items-center text-xs font-mono text-neutral-500 bg-white px-3 py-1 border border-neutral-200 rounded-sm">
-            <GitBranch size={12} className="mr-1 text-primary-500" />
-            <span>{companyName}.VALUES.FOUNDATION.{currentYear}</span>
+            <Shield size={12} className="mr-1 text-primary-500" />
+            <span>{companyName}.VALUES.EST.2002</span>
           </div>
         </div>
       </div>

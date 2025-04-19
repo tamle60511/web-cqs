@@ -1,5 +1,6 @@
-import React from 'react';
-import { Activity, Radio, Target, BarChart2, ChevronRight, Zap, Search, Shield } from 'lucide-react';
+
+import React, { ReactElement } from 'react';
+import { Activity, Radio, Target, BarChart2, ChevronRight, Zap, Search, Shield, Recycle, Globe } from 'lucide-react';
 
 interface MissionVisionProps {
   className?: string;
@@ -18,21 +19,21 @@ interface MissionVisionProps {
 const MissionVision: React.FC<MissionVisionProps> = ({
   className = '',
   sectionTitle = 'Corporate Philosophy',
-  heading = 'Our Mission & ',
-  highlightedText = 'Vision',
+  heading = 'Creativity, Quality & ',
+  highlightedText = 'Sustainability',
   missionTitle = 'Our Mission',
-  missionDescription = 'To deliver world-class precision-engineered aluminum components that exceed customer expectations through technological innovation, manufacturing excellence, and unwavering commitment to quality.',
+  missionDescription = 'To deliver exceptional die-cast aluminum components through creative engineering solutions, uncompromising quality standards, and environmentally responsible manufacturing processes that exceed our customers expectations and drive innovation in the automotive industry.',
   missionPoints = [
-    'Provide innovative lightweight solutions that enhance performance and efficiency',
-    'Maintain highest standards of precision and reliability in every component',
-    'Foster long-term partnerships with customers through exceptional service'
+    'Engineer innovative lightweight solutions that enhance vehicle performance and efficiency',
+    'Maintain industry-leading quality standards with precision tolerances of ±0.01mm',
+    'Implement sustainable manufacturing practices that minimize environmental impact'
   ],
   visionTitle = 'Our Vision',
-  visionDescription = 'To be the leading global supplier of advanced aluminum components for the automotive and motorcycle industries, driving innovation in lightweight design and sustainable manufacturing.',
+  visionDescription = 'To be recognized globally as the industry leader in high-precision die casting technology, setting new standards for aluminum component manufacturing through our commitment to creativity, quality, and sustainability.',
   visionPoints = [
-    'Lead the industry transition to lightweight components for future mobility',
-    'Pioneer eco-friendly aluminum manufacturing processes',
-    'Create enduring value for customers, employees, and communities'
+    'Pioneer advanced lightweight solutions for the next generation of vehicles',
+    'Achieve a 100% aluminum recycling rate and carbon-neutral manufacturing',
+    'Expand our global presence while maintaining exceptional quality and customer service'
   ],
   companyName = 'CQS'
 }) => {
@@ -43,24 +44,24 @@ const MissionVision: React.FC<MissionVisionProps> = ({
   // Current year for reference codes
   const currentYear = new Date().getFullYear();
 
-  // Icons for mission points
-  const missionIcons = [
-    <Zap size={14} className="text-primary-400" />,
-    <Shield size={14} className="text-primary-400" />,
-    <BarChart2 size={14} className="text-primary-400" />
+  // Icons for mission points - Fixed with proper TypeScript typing
+  const missionIcons: ReactElement[] = [
+    <Zap key="mission-icon-1" size={14} className="text-primary-400" />,
+    <Shield key="mission-icon-2" size={14} className="text-primary-400" />,
+    <Recycle key="mission-icon-3" size={14} className="text-primary-400" />
   ];
 
-  // Icons for vision points
-  const visionIcons = [
-    <Target size={14} className="text-primary-400" />,
-    <Search size={14} className="text-primary-400" />,
-    <ChevronRight size={14} className="text-primary-400" />
+  // Icons for vision points - Fixed with proper TypeScript typing
+  const visionIcons: ReactElement[] = [
+    <Target key="vision-icon-1" size={14} className="text-primary-400" />,
+    <Recycle key="vision-icon-2" size={14} className="text-primary-400" />,
+    <Globe key="vision-icon-3" size={14} className="text-primary-400" />
   ];
 
   return (
     <section className={`py-16 md:py-24 bg-neutral-900 text-white relative overflow-hidden ${className}`}>
       {/* Technical background patterns */}
-      <div className={`absolute inset-0 opacity-3 pointer-events-none ${gridPatternClass}`}></div>
+      <div className={`absolute inset-0 opacity-[0.03] pointer-events-none ${gridPatternClass}`}></div>
       <div className="absolute inset-0 bg-[linear-gradient(to_right,transparent_49px,#222_50px,#222_51px,transparent_51px),linear-gradient(to_bottom,transparent_49px,#222_50px,#222_51px,transparent_51px)] [background-size:50px_50px] opacity-[0.03]"></div>
 
       {/* Technical measurement marks */}

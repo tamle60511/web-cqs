@@ -1,4 +1,4 @@
-import Layout from '@/front-end/Layout/Layout';
+import Layout from '@/front-end/layout/Layout';
 import CoatingPerformanceComparison from '@/front-end/technologies/PerformanceRating';
 import TechnicalSpecifications from '@/front-end/technologies/Specification';
 import Technologies from '@/front-end/technologies/Technologies';

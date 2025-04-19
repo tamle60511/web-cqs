@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Image, Hash, ZoomIn, Play } from 'lucide-react';
 
@@ -69,70 +68,70 @@ const GalleryItem: React.FC<ProcessGalleryItem> = ({ id, step, title, descriptio
 // Gallery items data
 const galleryItems: ProcessGalleryItem[] = [
   {
-    id: "surface-preparation",
+    id: "mold-preparation",
     step: 1,
-    title: "Surface Preparation",
-    description: "Mechanical or chemical cleaning to remove contaminants, oils, and create optimal surface profile for coating adhesion.",
+    title: "Mold Preparation",
+    description: "Steel dies are precision-engineered with complex cooling channels and thermal regulation systems. Dies are preheated to 180-200°C and coated with specialized lubricants for optimal metal flow.",
     imageSrc: {
       thumbnail: "https://images.unsplash.com/photo-1574144113084-b6f450cc5e0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       fullSize: "https://images.unsplash.com/photo-1574144113084-b6f450cc5e0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
-    refCode: "IPT-01"
+    refCode: "HPDC-01"
   },
   {
-    id: "pre-treatment",
+    id: "metal-melting",
     step: 2,
-    title: "Pre-treatment",
-    description: "Chemical treatments such as phosphating or conversion coating to enhance adhesion and corrosion resistance.",
+    title: "Metal Melting",
+    description: "Aluminum alloys (ADC12, A380, A383, A356) are precision melted at 660-720°C in controlled atmosphere furnaces. Molten metal undergoes degassing to remove hydrogen and inclusions for superior casting integrity.",
     imageSrc: {
       thumbnail: "https://images.unsplash.com/photo-1581092916357-5895ad271243?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       fullSize: "https://images.unsplash.com/photo-1581092916357-5895ad271243?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
-    refCode: "IPT-02"
+    refCode: "HPDC-02"
   },
   {
-    id: "coating-application",
+    id: "injection-phase",
     step: 3,
-    title: "Coating Application",
-    description: "Application of paint or powder coating using automated spray systems, electrostatic guns, or dipping methods.",
+    title: "High Pressure Injection",
+    description: "Molten aluminum is injected into the die cavity at speeds up to 80 m/s and pressures between 70-120 MPa using our 250-1,650 ton machines, enabling the production of complex geometries with walls as thin as 0.8mm.",
     imageSrc: {
       thumbnail: "https://images.unsplash.com/photo-1579781354199-a28a85f87dce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       fullSize: "https://images.unsplash.com/photo-1579781354199-a28a85f87dce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
-    refCode: "IPT-03"
+    refCode: "HPDC-03"
   },
   {
-    id: "curing-process",
+    id: "solidification",
     step: 4,
-    title: "Curing Process",
-    description: "Heat application in specialized ovens at 140-200°C to polymerize and harden the coating, forming a durable finish.",
+    title: "Controlled Solidification",
+    description: "Advanced thermal management system maintains 90-100 MPa pressure during solidification, minimizing porosity and ensuring excellent mechanical properties with near-theoretical density (up to 99.8%) for automotive-grade quality.",
     imageSrc: {
       thumbnail: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       fullSize: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
-    refCode: "IPT-04"
+    refCode: "HPDC-04"
   },
   {
-    id: "cooling-process",
+    id: "ejection",
     step: 5,
-    title: "Cooling Process",
-    description: "Controlled cooling to ambient temperature, preventing thermal stress and ensuring optimal finish characteristics.",
+    title: "Precision Ejection",
+    description: "Robotic extraction systems remove solidified components with synchronized pin movements to maintain dimensional accuracy. Our automated systems ensure part integrity while optimizing cycle times to as low as 45 seconds.",
     imageSrc: {
       thumbnail: "https://images.unsplash.com/photo-1593171865395-e07c0bfa74db?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       fullSize: "https://images.unsplash.com/photo-1593171865395-e07c0bfa74db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
-    refCode: "IPT-05"
+    refCode: "HPDC-05"
   },
   {
-    id: "quality-inspection",
+    id: "post-processing",
     step: 6,
-    title: "Quality Inspection",
-    description: "Comprehensive verification of coating thickness, adhesion, appearance, and performance properties using specialized testing equipment.",
+    title: "Post-Processing & Quality Control",
+    description: "Components undergo trimming, CNC machining, and comprehensive inspection including 3D scanning (±0.01mm accuracy), X-ray for internal integrity, and mechanical testing to meet IATF 16949 standards for automotive applications.",
     imageSrc: {
       thumbnail: "https://images.unsplash.com/photo-1581093502840-439046a0439e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       fullSize: "https://images.unsplash.com/photo-1581093502840-439046a0439e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
     },
-    refCode: "IPT-06"
+    refCode: "HPDC-06"
   }
 ];
 
@@ -165,7 +164,7 @@ const TechnologyProcess: React.FC<ProcessGalleryProps> = ({ id = "process-galler
             </div>
 
             <h2 className="text-3xl font-bold text-white mb-4 tracking-tight text-center">
-              Industrial <span className="text-primary-500">Painting Process</span> Gallery
+              High Pressure <span className="text-primary-500">Die Casting Process</span> Gallery
             </h2>
 
             <div className="w-20 h-0.5 bg-neutral-700 mb-6 relative">
@@ -173,7 +172,7 @@ const TechnologyProcess: React.FC<ProcessGalleryProps> = ({ id = "process-galler
             </div>
 
             <p className="text-neutral-300 max-w-3xl text-center mb-10">
-              Explore our advanced industrial painting process through this detailed visual guide. Each image represents a critical stage in creating durable, protective, and aesthetically appealing surface finishes.
+              Explore CQS's state-of-the-art HPDC manufacturing process through this visual guide. Each image represents a critical stage in creating precision aluminum components with exceptional dimensional accuracy, surface quality, and mechanical integrity for demanding automotive applications.
             </p>
           </div>
 
@@ -197,7 +196,7 @@ const TechnologyProcess: React.FC<ProcessGalleryProps> = ({ id = "process-galler
             <a href="#video" className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium transition-colors border border-primary-700 group relative">
               <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              Watch Painting Process Video
+              Watch Die Casting Process Video
               <Play className="ml-2 w-5 h-5" />
             </a>
           </div>

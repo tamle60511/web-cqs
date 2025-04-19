@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight, Clock, Zap, CheckCircle2, Target } from 'lucide-react';
+import { ChevronRight, Clock, Zap, CheckCircle2, Target, Recycle, Award, Globe } from 'lucide-react';
 
 interface TimelineItem {
   year: string;
@@ -20,48 +20,62 @@ interface CompanyTimelineProps {
 const Timeline: React.FC<CompanyTimelineProps> = ({
   className = '',
   companyName = 'CQS',
-  title = 'Company <span class="text-primary-600">Evolution</span>',
-  subtitle = 'Our Journey',
+  title = 'Our <span class="text-primary-600">Journey</span> to Excellence',
+  subtitle = 'Company History',
   timelineItems = [
     {
-      year: '2005',
+      year: '2002',
       title: 'Company Foundation',
-      description: `CQS was established in Vietnam with a focus on aluminum die-casting for the motorcycle
-        parts industry. Starting with a 2,000 sq.m facility and 25 employees, the company
-        began serving domestic manufacturers with precision components.`,
-      milestone: 'First Manufacturing Facility'
+      description: `${companyName} was established in Vietnam with a focus on aluminum die casting for the motorcycle
+        industry. Starting with a 3,000 sq.m facility and 50 employees, the company
+        began producing precision aluminum components using two 250-ton die casting machines.`,
+      milestone: 'Vietnam Manufacturing Center Established',
+      icon: <Target size={16} className="text-primary-600" />
     },
     {
-      year: '2010',
-      title: 'Expansion & Certification',
-      description: `Following rapid growth, CQS expanded operations to a 5,000 sq.m facility and obtained
-        ISO 9001:2008 certification. This period marked our entry into international markets,
-        primarily serving Japanese and Korean automotive suppliers.`,
-      milestone: 'ISO 9001:2008 Certification'
+      year: '2008',
+      title: 'Expansion & Quality Certification',
+      description: `Following steady growth, ${companyName} expanded operations to a 7,000 sq.m facility and obtained
+        ISO 9001:2008 certification. This period marked our first exports to Taiwan and Japan,
+        establishing our international market presence in the automotive components sector.`,
+      milestone: 'ISO 9001:2008 Certification',
+      icon: <Award size={16} className="text-primary-600" />
     },
     {
-      year: '2015',
-      title: 'Technological Advancement',
-      description: `CQS invested in advanced CNC machining centers and 5-axis machines, establishing an in-house
-        tool and die workshop. This period saw significant growth in our capability to produce
-        complex, high-precision aluminum components with tolerances as low as ±0.01mm.`,
-      milestone: '12 CNC Machining Centers'
+      year: '2013',
+      title: 'Advanced Technology Implementation',
+      description: `${companyName} made significant investments in advanced manufacturing technologies, including
+        high-pressure die casting (HPDC) and gravity die casting (GDC) processes. We added six
+        state-of-the-art CNC machining centers to enhance our precision capabilities to ±0.01mm tolerances.`,
+      milestone: 'HPDC & GDC Technology Integration',
+      icon: <Zap size={16} className="text-primary-600" />
     },
     {
-      year: '2020',
-      title: 'Global Integration',
-      description: `CQS became a trusted supplier for major global automotive manufacturers, achieving
-        IATF 16949 certification. Our new 15,000 sq.m state-of-the-art facility integrated
-        die-casting, CNC machining, surface treatment, and assembly processes under one roof.`,
-      milestone: 'IATF 16949 Certification'
+      year: '2017',
+      title: 'Automotive Quality Excellence',
+      description: `${companyName} achieved IATF 16949 certification, the international standard for automotive quality
+        management systems. Our 15,000 sq.m state-of-the-art facility integrated die-casting,
+        CNC machining, surface treatment, and assembly processes to provide a "one-stop" manufacturing solution.`,
+      milestone: 'IATF 16949 Certification',
+      icon: <CheckCircle2 size={16} className="text-primary-600" />
+    },
+    {
+      year: '2021',
+      title: 'Sustainability & Global Expansion',
+      description: `${companyName} implemented an advanced aluminum recycling system, achieving a 93% recycling rate.
+        We expanded our global distribution network to eight countries including the United States, Canada,
+        Mexico, Japan, Italy, Taiwan, China, and Southeast Asia with a focus on lightweight automotive components.`,
+      milestone: '93% Aluminum Recycling Achievement',
+      icon: <Recycle size={16} className="text-primary-600" />
     },
     {
       year: 'Today',
       title: 'Industry Leadership',
-      description: `Today, CQS stands as a leading manufacturer of precision aluminum components with over 250 employees
-        and production capacity exceeding 1.5 million components annually. We continue to innovate in
-        lightweight automotive solutions, electric vehicle components, and sustainable manufacturing processes.`,
-      milestone: 'Supplying 30+ Global Brands'
+      description: `Today, ${companyName} stands as a leading die casting specialist with over 1,000 employees
+        and production capacity exceeding 3 million components annually. Our die casting machines range from
+        250 to 1,650 tons, enabling us to produce complex automotive components that meet the highest international standards.`,
+      milestone: 'Operating in 8+ Global Markets',
+      icon: <Globe size={16} className="text-primary-600" />
     }
   ]
 }) => {
@@ -70,13 +84,6 @@ const Timeline: React.FC<CompanyTimelineProps> = ({
 
   // Get current year for reference calculations
   const currentYear = new Date().getFullYear();
-
-  // Optional hardcoded icons that could be used
-  const icons = [
-    <Target size={16} className="text-primary-600" />,
-    <CheckCircle2 size={16} className="text-primary-600" />,
-    <Zap size={16} className="text-primary-600" />
-  ];
 
   return (
     <section className={`py-16 md:py-24 bg-neutral-50 relative overflow-hidden ${className}`}>
@@ -93,7 +100,7 @@ const Timeline: React.FC<CompanyTimelineProps> = ({
         {[0, 1, 2, 3, 4].map((i) => (
           <div key={i} className="absolute left-0 w-2 h-px bg-neutral-400" style={{ top: `${i * 25}%` }}>
             <div className="absolute -right-6 -top-1.5 text-[10px] font-mono text-neutral-400">
-              {Math.round(2005 + (i * (currentYear - 2005) / 4))}
+              {Math.round(2002 + (i * (currentYear - 2002) / 4))}
             </div>
           </div>
         ))}
@@ -179,7 +186,7 @@ const Timeline: React.FC<CompanyTimelineProps> = ({
                 <div className="absolute top-6 -left-10 w-6 h-0.5 bg-primary-200 -ml-1 group-hover:bg-primary-400 transition-colors"></div>
 
                 {/* Timeline item content with technical border */}
-                <div className="border-l-2 border-neutral-200 pl-6 relative group-hover:border-primary-300 transition-colors">
+                <div className="pl-6 relative">
                   {/* Technical reference code */}
                   <div className="absolute top-0 right-0 text-xs font-mono text-neutral-400">
                     REF:{index + 1}.{item.year}
@@ -200,7 +207,7 @@ const Timeline: React.FC<CompanyTimelineProps> = ({
                   {item.milestone && (
                     <div className="bg-neutral-50 border border-neutral-200 p-3 flex items-start">
                       <div className="w-6 h-6 bg-primary-100 border border-primary-200 rounded-sm flex items-center justify-center mr-3 flex-shrink-0">
-                        {item.icon || icons[index % icons.length]}
+                        {item.icon}
                       </div>
                       <div>
                         <div className="text-xs text-neutral-500 uppercase tracking-wide mb-0.5">Key Milestone</div>

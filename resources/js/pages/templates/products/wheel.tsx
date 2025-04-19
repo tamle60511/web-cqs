@@ -1,4 +1,4 @@
-import Layout from '@/front-end/Layout/Layout';
+import Layout from '@/front-end/layout/Layout';
 import Applications from '@/front-end/products/Applications';
 import ContactQuote from '@/front-end/products/ContactQuote';
 import DownloadResourcesSection from '@/front-end/products/DownloadResources';

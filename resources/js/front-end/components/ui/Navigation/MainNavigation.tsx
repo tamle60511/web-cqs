@@ -2,8 +2,10 @@ import AppLogo from '@/components/app-logo';
 import { Link } from '@inertiajs/react';
 import React from 'react'
 import DesktopNavigation from './DesktopNavigation';
-import MobileMenuButton from './ui/MobileMenuButton';
+import MobileMenuButton from '../Navbar/MobileMenuButton';
 import MobileNavigation from './MobileNavigation';
+
+
 
 export interface DropdownItem {
     label: string;

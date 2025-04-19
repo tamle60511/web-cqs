@@ -1,6 +1,7 @@
 import React from 'react'
-import MobileNavItem from './MobileNavItem';
+
 import { Search } from 'lucide-react';
+import MobileNavItem from '../Navbar/MobileNavItem';
 
 export interface DropdownItem {
     label: string;

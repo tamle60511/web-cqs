@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Layers, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -63,30 +62,30 @@ const TechnologyCard: React.FC<{ technology: Technology }> = ({ technology }) =>
 // Technologies data
 const technologiesData: Technology[] = [
   {
-    id: "powder-coating",
-    title: "Powder Coating",
+    id: "conventional-hpdc",
+    title: "Conventional HPDC",
     features: [
-      { id: "powder-1", text: "Electrostatic application" },
-      { id: "powder-2", text: "Solvent-free formulations" },
-      { id: "powder-3", text: "Single-coat application" },
-      { id: "powder-4", text: "High durability finish" }
+      { id: "conv-1", text: "Injection pressures up to 120 MPa" },
+      { id: "conv-2", text: "Dimensional accuracy of ±0.05mm" },
+      { id: "conv-3", text: "High production rates (45-60 sec cycles)" },
+      { id: "conv-4", text: "Wall thickness down to 0.8mm" }
     ],
     imageSrc: "https://images.unsplash.com/photo-1579781353979-874318e5f5f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Powder Coating Process",
-    referenceCode: "IPT-POWDER-2023"
+    imageAlt: "Conventional HPDC Process",
+    referenceCode: "CQS-HPDC-STD-2023"
   },
   {
-    id: "liquid-painting",
-    title: "Liquid Painting",
+    id: "vacuum-hpdc",
+    title: "Vacuum-Assisted HPDC",
     features: [
-      { id: "liquid-1", text: "Water or solvent-based" },
-      { id: "liquid-2", text: "Multiple application methods" },
-      { id: "liquid-3", text: "Superior color matching" },
-      { id: "liquid-4", text: "Versatile finish options" }
+      { id: "vac-1", text: "Reduced porosity (<1% gas content)" },
+      { id: "vac-2", text: "Enhanced mechanical properties" },
+      { id: "vac-3", text: "Heat-treatable components" },
+      { id: "vac-4", text: "Structural automotive applications" }
     ],
     imageSrc: "https://images.unsplash.com/photo-1562259929-b4e1fd0aae57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    imageAlt: "Liquid Painting Process",
-    referenceCode: "IPT-LIQUID-2023"
+    imageAlt: "Vacuum-Assisted HPDC Process",
+    referenceCode: "CQS-HPDC-VAC-2023"
   }
 ];
 
@@ -109,7 +108,7 @@ const Technologies: React.FC<TechnologiesProps> = ({
             </div>
 
             <h2 className="text-3xl font-bold text-neutral-900 mb-4 tracking-tight text-center">
-              Our <span className="text-primary-600">Painting Technologies</span>
+              Our <span className="text-primary-600">Die Casting Technologies</span>
             </h2>
 
             <div className="w-20 h-0.5 bg-neutral-300 mb-6 relative">
@@ -132,13 +131,13 @@ const Technologies: React.FC<TechnologiesProps> = ({
               <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-primary-500"></div>
               <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-primary-500"></div>
 
-              <h3 className="text-xl font-bold text-neutral-900 mb-3">Enhance Your Products with Industrial Painting</h3>
-              <p className="text-neutral-600 mb-6">Our experts can recommend the optimal coating solution for your specific product requirements and operational environment.</p>
+              <h3 className="text-xl font-bold text-neutral-900 mb-3">Optimize Your Components with HPDC Technology</h3>
+              <p className="text-neutral-600 mb-6">Our engineering team can help you select the optimal die casting process for your automotive components, balancing performance requirements, design complexity, and production volumes.</p>
 
               <a href="#contact" className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium transition-colors border border-primary-700 inline-flex items-center group relative">
                 <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                Request a Coating Consultation
+                Request Technical Consultation
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </div>

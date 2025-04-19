@@ -12,7 +12,7 @@ export interface DropdownItem {
     currentPath: string;
   }> = ({ isActive, items, isHoverable = false, currentPath }) => (
     <div
-      className={`absolute top-full left-0 w-48 bg-white shadow-lg rounded-sm border border-neutral-200 z-10 transition-all duration-200 ${
+      className={`absolute top-full left-0 w-48 bg-white shadow-lg rounded-sm border border-neutral-200 z-99 transition-all duration-200 ${
         isActive
           ? "opacity-100 visible transform translate-y-0"
           : `opacity-0 invisible transform translate-y-2 ${isHoverable ? "group-hover:opacity-100 group-hover:visible group-hover:translate-y-0" : ""}`

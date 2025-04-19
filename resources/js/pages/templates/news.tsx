@@ -1,4 +1,4 @@
-import Layout from '@/front-end/Layout/Layout'
+import Layout from '@/front-end/layout/Layout'
 import FeaturedArticles from '@/front-end/news/FeaturedArticle'
 import LatestNewsGrid from '@/front-end/news/LatestNews'
 import NewsArchivesSection from '@/front-end/news/NewsArchivesSection'

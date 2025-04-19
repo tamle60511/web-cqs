@@ -1,6 +1,5 @@
-
 import React, { ReactNode } from 'react';
-import { MoveRight, PaintBucket, LayoutGrid } from 'lucide-react';
+import { MoveRight, Zap, LayoutGrid, Droplet, Thermometer, Gauge, Cylinder, Ruler, Shield } from 'lucide-react';
 
 // Define interfaces for structured data
 interface ProcessStep {
@@ -34,54 +33,54 @@ const ProcessDetailItem: React.FC<ProcessDetail> = ({ number, title, description
 
 // Data for process steps
 const processSteps: string[] = [
-  "Surface Preparation",
-  "Pre-treatment",
-  "Coating Application",
-  "Curing",
-  "Cooling",
-  "Quality Inspection"
+  "Mold Preparation",
+  "Metal Melting",
+  "Injection",
+  "Solidification",
+  "Ejection",
+  "Post-Processing"
 ];
 
 // Data for process details
 const processDetails: { title: string; description: string }[] = [
   {
-    title: "Surface Preparation",
-    description: "Mechanical or chemical cleaning to remove contaminants, oils, and debris. May include blasting, degreasing, or sanding to create optimal surface profile."
+    title: "Mold Preparation",
+    description: "Our steel dies are precision-engineered with complex cooling channels and coated with specialized die lubricants. Temperature pre-conditioning at 180-200°C ensures optimal filling dynamics and surface finish quality."
   },
   {
-    title: "Pre-treatment",
-    description: "Chemical treatments such as phosphating, chromating, or conversion coating to enhance adhesion and corrosion resistance of the final coating."
+    title: "Metal Melting",
+    description: "Premium aluminum alloys (ADC12, A380, A383, A356) are melted in energy-efficient furnaces at 660-720°C. The molten metal undergoes degassing treatment to remove hydrogen and non-metallic inclusions, ensuring casting integrity."
   },
   {
-    title: "Coating Application",
-    description: "Application of paint or powder coating using spray guns, electrostatic systems, or dipping methods. May be manual or fully automated for consistency."
+    title: "Injection",
+    description: "Utilizing our 250-1,650 ton machines, molten aluminum is injected into the die cavity at velocities up to 80 m/s and pressures between 70-120 MPa. This high-speed, high-pressure injection enables the production of complex, thin-walled components."
   },
   {
-    title: "Curing",
-    description: "Heat application in curing ovens to polymerize the coating. Temperatures typically range from 140-200°C depending on coating type and substrate material."
+    title: "Solidification",
+    description: "Controlled cooling through our advanced thermal management system with pressurization at 90-100 MPa during solidification. This pressure minimizes porosity and ensures excellent mechanical properties with density up to 99.8% of theoretical."
   },
   {
-    title: "Cooling",
-    description: "Controlled cooling of components to ambient temperature, preventing thermal stress and ensuring optimal finish characteristics."
+    title: "Ejection",
+    description: "Precision ejection system removes solidified components from the die with synchronized pin movement to prevent distortion. Our robotic extraction systems maintain part integrity while optimizing cycle times."
   },
   {
-    title: "Quality Inspection",
-    description: "Comprehensive verification of coating thickness, adhesion, appearance, and performance properties using specialized testing equipment."
+    title: "Post-Processing",
+    description: "Components undergo trimming, shot blasting, and precision CNC machining. Quality verification includes 3D dimensional scanning, X-ray inspection for internal integrity, and mechanical property testing to meet automotive industry requirements."
   }
 ];
 
 // Introduction paragraphs
 const introText: string[] = [
-  "Industrial painting encompasses a range of specialized coating technologies designed to apply protective and decorative finishes to manufactured products and components. It includes both powder coating and liquid painting processes, each offering distinct advantages for different applications.",
-  "Our advanced painting systems utilize state-of-the-art application methods, environmentally compliant coatings, and precisely controlled curing processes to deliver superior surface finishes. These technologies provide essential protection against corrosion, wear, chemicals, and environmental factors while enhancing aesthetic appeal and product longevity."
+  "High Pressure Die Casting (HPDC) is an advanced manufacturing process for producing complex aluminum components with excellent dimensional accuracy and surface quality. It involves injecting molten aluminum into steel dies under extreme pressure, making it ideal for high-volume production of lightweight, thin-walled components with tight tolerances.",
+  "At CQS, our HPDC technology employs cutting-edge automation, precise thermal management, and industry-leading pressurization techniques. Our process delivers components with superior mechanical properties, minimal porosity, and exceptional surface finish—critical requirements for automotive structural and powertrain applications, including emerging EV battery housings and motor components."
 ];
 
-interface IndustrialPaintingOverviewProps {
+interface HPDCOverviewProps {
   id?: string;
   className?: string;
 }
 
-const TechnologyOverview: React.FC<IndustrialPaintingOverviewProps> = ({
+const TechnologyOverview: React.FC<HPDCOverviewProps> = ({
   id = "learn-more",
   className = ""
 }) => {
@@ -105,7 +104,7 @@ const TechnologyOverview: React.FC<IndustrialPaintingOverviewProps> = ({
             </div>
 
             <h2 className="text-3xl font-bold text-neutral-900 mb-4 tracking-tight text-center">
-              Industrial <span className="text-primary-600">Painting Technology</span>
+              High Pressure <span className="text-primary-600">Die Casting Technology</span>
             </h2>
 
             <div className="w-20 h-0.5 bg-neutral-300 mb-6 relative">
@@ -121,9 +120,9 @@ const TechnologyOverview: React.FC<IndustrialPaintingOverviewProps> = ({
 
               <h3 className="text-xl font-bold text-neutral-900 mb-4 flex items-center">
                 <div className="w-8 h-8 bg-primary-100 border border-primary-200 flex items-center justify-center mr-3 flex-shrink-0">
-                  <PaintBucket className="w-4.5 h-4.5 text-primary-600" />
+                  <Zap className="w-4.5 h-4.5 text-primary-600" />
                 </div>
-                What is Industrial Painting?
+                What is High Pressure Die Casting?
               </h3>
 
               {introText.map((paragraph, index) => (
@@ -133,18 +132,18 @@ const TechnologyOverview: React.FC<IndustrialPaintingOverviewProps> = ({
               ))}
 
               <div className="text-xs text-neutral-500 font-mono flex items-center mt-6">
-                <MoveRight className="w-3.5 h-3.5 mr-2 text-primary-500" />
-                <span>REF: IPT-TECH-2023</span>
+                <Gauge className="w-3.5 h-3.5 mr-2 text-primary-500" />
+                <span>REF: CQS-HPDC-2023</span>
               </div>
             </div>
 
-            {/* Painting Process Flow */}
+            {/* HPDC Process Flow */}
             <div className="bg-white border border-neutral-200 p-6 shadow-sm">
               <h3 className="text-xl font-bold text-neutral-900 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-primary-100 border border-primary-200 flex items-center justify-center mr-3 flex-shrink-0">
                   <LayoutGrid className="w-4.5 h-4.5 text-primary-600" />
                 </div>
-                Painting Process Flow
+                HPDC Process Flow
               </h3>
 
               <div className="relative py-8">

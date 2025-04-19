@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Boxes, Settings, ShieldCheck, Download, Clock } from 'lucide-react';
+import { Boxes, Settings, ShieldCheck, Download, Clock, Gauge, Cpu } from 'lucide-react';
 
 // Interface for specification item
 interface SpecificationItem {
@@ -60,27 +59,27 @@ const SpecCategory: React.FC<{ category: SpecificationCategory }> = ({ category 
 // Specifications data
 const specificationsData: SpecificationCategory[] = [
   {
-    id: "powder-coating",
-    title: "Powder Coating Specifications",
-    icon: <Settings className="w-5 h-5 mr-2 text-primary-500" />,
+    id: "conventional-hpdc",
+    title: "Conventional HPDC Specifications",
+    icon: <Gauge className="w-5 h-5 mr-2 text-primary-500" />,
     items: [
-      { id: "powder-thickness", label: "Coating Thickness", value: "40-150 μm" },
-      { id: "powder-temperature", label: "Cure Temperature", value: "180-200°C" },
-      { id: "powder-time", label: "Cure Time", value: "10-20 minutes" },
-      { id: "powder-resistance", label: "Salt Spray Resistance", value: "Up to 1,000 hours" },
-      { id: "powder-impact", label: "Impact Resistance", value: "80+ in/lb" }
+      { id: "std-machine", label: "Machine Tonnage", value: "250-1,650 tons" },
+      { id: "std-pressure", label: "Injection Pressure", value: "70-120 MPa" },
+      { id: "std-velocity", label: "Injection Velocity", value: "20-80 m/s" },
+      { id: "std-thickness", label: "Min. Wall Thickness", value: "0.8-1.5 mm" },
+      { id: "std-tolerance", label: "Dimensional Tolerance", value: "±0.05 mm" }
     ]
   },
   {
-    id: "liquid-coating",
-    title: "Liquid Coating Specifications",
-    icon: <ShieldCheck className="w-5 h-5 mr-2 text-primary-500" />,
+    id: "vacuum-hpdc",
+    title: "Vacuum-Assisted HPDC Specifications",
+    icon: <Cpu className="w-5 h-5 mr-2 text-primary-500" />,
     items: [
-      { id: "liquid-thickness", label: "Coating Thickness", value: "25-100 μm" },
-      { id: "liquid-temperature", label: "Cure Temperature", value: "140-180°C" },
-      { id: "liquid-voc", label: "VOC Content", value: "50-350 g/L" },
-      { id: "liquid-gloss", label: "Gloss Range", value: "5-95 GU" },
-      { id: "liquid-uv", label: "UV Resistance", value: "Up to 5 years (exterior)" }
+      { id: "vac-machine", label: "Machine Tonnage", value: "630-1,650 tons" },
+      { id: "vac-pressure", label: "Vacuum Level", value: "50-80 mbar" },
+      { id: "vac-porosity", label: "Porosity Level", value: "<1% by volume" },
+      { id: "vac-tensile", label: "Tensile Strength (A380)", value: "330 MPa" },
+      { id: "vac-heat", label: "Heat Treatment Option", value: "T5, T6, T7" }
     ]
   }
 ];
@@ -88,9 +87,9 @@ const specificationsData: SpecificationCategory[] = [
 const TechnicalSpecifications: React.FC<TechnicalSpecificationsProps> = ({
   id = "technical-specs",
   className = "",
-  lastUpdated = "2023-10-05",
-  referenceCode = "IPT-TECH-SPEC-2023",
-  version = "3.0"
+  lastUpdated = "2023-11-15",
+  referenceCode = "CQS-HPDC-SPEC-2023",
+  version = "2.4"
 }) => {
   return (
     <section id={id} className={`py-16 md:py-20 bg-neutral-900 text-white relative overflow-hidden ${className}`}>
@@ -110,11 +109,11 @@ const TechnicalSpecifications: React.FC<TechnicalSpecificationsProps> = ({
           {/* Technical document code */}
           <div className="inline-flex items-center bg-neutral-800/80 text-white px-3 py-1 mb-8 border-l-2 border-primary-600 text-xs font-mono">
             <Boxes className="w-3 h-3 mr-2 text-primary-500" />
-            <span>TECHNICAL.SPECIFICATIONS.IPT</span>
+            <span>TECHNICAL.SPECIFICATIONS.HPDC</span>
           </div>
 
           <h2 className="text-3xl font-bold mb-6 relative">
-            Detailed <span className="text-primary-500">Technical Specifications</span>
+            HPDC <span className="text-primary-500">Technical Specifications</span>
             <div className="absolute -top-3 -right-3 text-xs text-primary-400 font-mono opacity-60 hidden md:block">[v.{version}]</div>
           </h2>
 
@@ -132,7 +131,7 @@ const TechnicalSpecifications: React.FC<TechnicalSpecificationsProps> = ({
           <a href="#download" className="inline-flex items-center px-6 py-3 bg-neutral-800 hover:bg-neutral-700 text-white font-medium transition-colors border border-neutral-600 hover:border-neutral-500 group relative">
             <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            Download Full Specifications
+            Download HPDC Technical Datasheet
             <Download className="ml-2 w-5 h-5" />
           </a>
 

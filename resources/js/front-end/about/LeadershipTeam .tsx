@@ -22,38 +22,38 @@ interface LeadershipTeamProps {
 
 const LeadershipTeam: React.FC<LeadershipTeamProps> = ({
   className = '',
-  sectionTitle = 'Our Team',
-  heading = <>Leadership <span className="text-primary-600">Team</span></>,
+  sectionTitle = 'Executive Leadership',
+  heading = <>Management <span className="text-primary-600">Team</span></>,
   companyName = 'CQS',
   teamMembers = [
     {
-      name: 'Robert Chen',
-      position: 'Chief Executive Officer',
-      bio: 'With over 25 years of experience in precision manufacturing, Robert leads CQS with a focus on technical excellence and strategic growth in the global automotive components market.',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      name: 'CEO-001',
+      position: 'Founder & Chief Executive Officer',
+      bio: 'With 28 years of experience in aluminum die casting, Mr. Minh founded CQS in 2002 with a vision to create a world-class precision components manufacturer. His leadership has established CQS as a trusted partner for automotive manufacturers across Asia, Europe, and North America.',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
       id: 'CEO-001',
-      expertise: ['Strategic Leadership', 'Manufacturing Excellence', 'Global Markets'],
-      yearsOfExperience: 25,
-      education: 'MBA, Manufacturing Engineering'
+      expertise: ['Strategic Leadership', 'Die Casting Technology', 'International Business'],
+      yearsOfExperience: 28,
+      education: 'MBA, Mechanical Engineering'
     },
     {
-      name: 'Sarah Nguyen',
+      name: 'CTO-002',
       position: 'Chief Technical Officer',
-      bio: 'A mechanical engineering PhD with expertise in advanced aluminum alloys, Sarah drives CQS\'s technical innovation, overseeing R&D and new manufacturing process implementation.',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      bio: 'CTO-002 leads our technical innovation and R&D initiatives, specializing in high-performance aluminum alloys and precision manufacturing technologies. Her research has resulted in 12 patents and breakthrough advancements in thin-wall die casting for EV battery housing components.',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
       id: 'CTO-002',
-      expertise: ['Aluminum Alloys', 'Process Design', 'R&D Management'],
-      yearsOfExperience: 18,
-      education: 'PhD, Mechanical Engineering'
+      expertise: ['Aluminum Metallurgy', 'Process Innovation', 'Automotive Engineering'],
+      yearsOfExperience: 22,
+      education: 'PhD, Materials Science'
     },
     {
-      name: 'Michael Tran',
+      name: 'COO-003',
       position: 'Chief Operations Officer',
-      bio: 'Michael brings 18 years of automotive manufacturing experience, optimizing CQS\'s production systems and ensuring operational excellence across all facilities.',
+      bio: 'COO-003 oversees all manufacturing operations across our facilities, implementing lean manufacturing principles and IATF 16949 quality standards. His expertise in automated production systems has enabled CQS to achieve industry-leading efficiency with 99.8% on-time delivery performance.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
       id: 'COO-003',
-      expertise: ['Operational Excellence', 'Supply Chain', 'Lean Manufacturing'],
-      yearsOfExperience: 18,
+      expertise: ['Manufacturing Excellence', 'Quality Systems', 'Supply Chain Optimization'],
+      yearsOfExperience: 25,
       education: 'MS, Industrial Engineering'
     }
   ]
@@ -76,7 +76,7 @@ const LeadershipTeam: React.FC<LeadershipTeamProps> = ({
       <div className="absolute bottom-12 left-12 w-24 h-24 border-b border-l border-neutral-300 hidden lg:block"></div>
 
       {/* Technical measurement marks */}
-      <div className="absolute top-0 left-0 right-0 h-2 flex opacity-30 hidden md:flex">
+      <div className="absolute top-0 left-0 right-0 h-2 opacity-30 hidden md:flex">
         {[...Array(20)].map((_, i) => (
           <div key={i} className="flex-1 border-r border-neutral-400/20 relative">
             {i % 5 === 0 && (
@@ -242,7 +242,7 @@ const LeadershipTeam: React.FC<LeadershipTeamProps> = ({
           <div className="text-xs font-mono text-neutral-500 flex items-center">
             <div className="w-8 h-px bg-neutral-300 mr-2"></div>
             <GitMerge size={14} className="text-primary-500 mr-2" />
-            <span>ORGANIZATIONAL STRUCTURE: EXECUTIVE LEADERSHIP TEAM</span>
+            <span>EST. 2002 • OVER 1,000 EMPLOYEES • 3 MANUFACTURING FACILITIES</span>
             <div className="w-8 h-px bg-neutral-300 ml-2"></div>
           </div>
         </div>

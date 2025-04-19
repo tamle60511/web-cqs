@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Play, Award, Wrench, ChevronRight, Phone, Cog, Users } from 'lucide-react';
 import Banner from '../images/banner-esg.jpg'
+import TitleBox from "../components/ui/Shared/TitleBox";
 
 const FactoryStrengthSection = () => {
       const [playPromoVideo, setPlayPromoVideo] = useState(false);
@@ -25,10 +26,8 @@ const FactoryStrengthSection = () => {
                     {/* Content section - spans 6 columns */}
                     <div className="lg:col-span-6">
                         {/* Industrial style badge */}
-                        <div className="inline-flex items-center bg-neutral-800/90 text-white px-4 py-2 rounded-sm mb-6 border-l-2 border-primary-600">
-                            <span className="text-sm font-medium tracking-wider uppercase">Our Company</span>
-                        </div>
 
+                        <TitleBox title="Our Company" />
                         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-neutral-900 leading-tight tracking-tight">
                             <span className="text-primary-600 relative inline-block">
                                 Creativity
@@ -66,7 +65,7 @@ const FactoryStrengthSection = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-base font-semibold text-neutral-900 uppercase tracking-wide">Advanced Technologies</h3>
-                                        <p className="text-neutral-600 text-sm mt-1">HPDC, CNC, GDC, Painting & Assembly</p>
+                                        <p className="text-neutral-600 text-sm mt-1">HPDC, CNC, GDC, Painting</p>
                                     </div>
                                 </div>
                             </div>

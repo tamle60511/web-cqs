@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Wrench, Building, Users, MapPin, Award, HelpCircle, Zap, Clock, Ruler, ChevronRight } from 'lucide-react';
+import { Globe, Wrench, Building, Users, MapPin, Award, HelpCircle, Zap, Clock, Ruler, ChevronRight, Recycle } from 'lucide-react';
 
 interface CompanyOverviewProps {
   className?: string;
@@ -16,12 +16,12 @@ interface CompanyOverviewProps {
 const Overview: React.FC<CompanyOverviewProps> = ({
   className = '',
   companyName = 'CQS',
-  establishedYear = 2005,
-  employeeCount = '250+ skilled professionals',
+  establishedYear = 2002,
+  employeeCount = '1000+ skilled professionals',
   facilitySize = '15,000 sq.m integrated factory',
-  certifications = 'ISO 9001:2015, IATF 16949',
-  coreProducts = 'Automotive & motorcycle components',
-  productionCapacity = '1.5M+ components annually',
+  certifications = 'IATF 16949, ISO 9001:2015, ISO 14001:2015',
+  coreProducts = 'Die-cast aluminum automotive & motorcycle components',
+  productionCapacity = '3M+ components annually',
   location = 'Vietnam',
 }) => {
   // Grid pattern CSS
@@ -60,12 +60,12 @@ const Overview: React.FC<CompanyOverviewProps> = ({
 
             <h2 className="text-3xl font-bold text-neutral-900 mb-4 tracking-tight text-center">
               <span className="relative inline-block">
-                Leading <span className="text-primary-600">Precision Manufacturing</span>
+                Aluminum <span className="text-primary-600">Die Casting Specialists</span>
                 <div className="absolute -bottom-2 left-0 right-0 h-px bg-primary-100"></div>
               </span>
               <span className="relative ml-2">
                 Since {establishedYear}
-                <div className="absolute top-0 -right-4 text-xs text-neutral-500 font-mono">({yearsOfOperation} YRS)</div>
+                <div className="absolute top-[-10px] -right-4 text-xs text-neutral-500 font-mono">({yearsOfOperation} YRS)</div>
               </span>
             </h2>
 
@@ -83,9 +83,10 @@ const Overview: React.FC<CompanyOverviewProps> = ({
             </div>
 
             <p className="text-neutral-600 leading-relaxed px-4 py-5 border-l-2 border-neutral-200 bg-neutral-50">
-              {companyName} is a leading manufacturer of precision aluminum components for the automotive and motorcycle industries in {location}.
-              With a state-of-the-art {facilitySize} and over {employeeCount.split(' ')[0]} skilled employees, we combine advanced die-casting
-              technology with precision CNC machining to deliver high-quality components that meet the most demanding specifications.
+              {companyName} provides a comprehensive "one-stop" manufacturing solution through our die-casting, CNC precision
+              machining, stamping, painting, assembly, and packaging facilities. Our integrated approach ensures consistent
+              quality control at every step, guaranteeing products that meet the most stringent global standards and customer
+              requirements.
             </p>
 
             {/* Feature boxes with enhanced technical styling */}
@@ -99,11 +100,13 @@ const Overview: React.FC<CompanyOverviewProps> = ({
                   <div className="w-8 h-8 bg-primary-100 border border-primary-200 flex items-center justify-center mr-3 flex-shrink-0 group-hover:bg-primary-200 transition-colors">
                     <Globe className="text-primary-600" size={18} />
                   </div>
-                  Global Reach
+                  Global Distribution
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">
-                  Our components are trusted by major automotive and motorcycle manufacturers across Asia, Europe, and North America.
-                  We supply precision parts to over 30 global brands, with exports to 15+ countries from our {location} manufacturing base.
+                  Our high-quality precision components are distributed to automotive and motorcycle
+                  manufacturers across <strong>Taiwan</strong>, <strong>the United States</strong>, <strong>Canada</strong>,
+                  <strong> Mexico</strong>, <strong>Japan</strong>, <strong>Italy</strong>, <strong>China</strong>, and
+                  <strong> Southeast Asia</strong>, establishing CQS as a trusted global supplier.
                 </p>
 
                 {/* Technical tag */}
@@ -121,11 +124,12 @@ const Overview: React.FC<CompanyOverviewProps> = ({
                   <div className="w-8 h-8 bg-primary-100 border border-primary-200 flex items-center justify-center mr-3 flex-shrink-0 group-hover:bg-primary-200 transition-colors">
                     <Wrench className="text-primary-600" size={18} />
                   </div>
-                  Technical Expertise
+                  Die Casting Excellence
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">
-                  Our engineering team brings decades of experience in aluminum die-casting and precision machining. We specialize in
-                  complex geometries, thin-wall components, and tight tolerance parts with precision down to ±0.01mm.
+                  CQS specializes in both High Pressure Die Casting (HPDC) and Gravity Die Casting (GDC) technologies.
+                  Our die casting machines range from 250 to 1,650 tons, enabling us to produce intricate aluminum
+                  components with wall thicknesses as low as 0.8mm and precision tolerances of ±0.01mm.
                 </p>
 
                 {/* Technical tag */}
@@ -143,7 +147,7 @@ const Overview: React.FC<CompanyOverviewProps> = ({
 
               <h4 className="text-lg font-bold text-neutral-900 mb-4 flex items-center">
                 <Ruler className="text-primary-600 mr-2" size={18} />
-                Integrated Manufacturing Process
+                Comprehensive One-Stop Manufacturing
               </h4>
 
               <div className="relative flex flex-wrap md:flex-nowrap items-center justify-between">
@@ -151,7 +155,7 @@ const Overview: React.FC<CompanyOverviewProps> = ({
                 <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-primary-100 hidden md:block"></div>
 
                 {/* Process steps */}
-                {['Design', 'Tooling', 'Die-Casting', 'Machining', 'Surface Treatment', 'Assembly'].map((step, index) => (
+                {['Die-Casting', 'CNC Machining', 'Surface Treatment', 'Painting', 'Assembly', 'Quality Control'].map((step, index) => (
                   <div key={index} className="flex flex-col items-center relative mb-6 md:mb-0 w-1/2 md:w-auto">
                     <div className="w-10 h-10 rounded-full bg-white z-10 border-2 border-primary-200 flex items-center justify-center text-primary-600 mb-2">
                       {index + 1}
@@ -177,7 +181,8 @@ const Overview: React.FC<CompanyOverviewProps> = ({
 
               {/* Technical note */}
               <div className="mt-6 text-xs text-neutral-500 border-t border-dashed border-neutral-300 pt-3">
-                This integrated approach ensures consistent quality, reduces lead times, and optimizes production costs.
+                Our vertically integrated approach ensures seamless production from die casting to finished component,
+                reducing lead times and maintaining superior quality control throughout the manufacturing process.
               </div>
             </div>
 
@@ -212,7 +217,7 @@ const Overview: React.FC<CompanyOverviewProps> = ({
                   </div>
                   <div>
                     <div className="font-medium text-neutral-900 flex items-center">
-                      Employees
+                      Team
                       <div className="ml-2 text-xs text-primary-600 font-mono opacity-0 group-hover:opacity-100 transition-opacity">#02</div>
                     </div>
                     <div className="text-sm text-neutral-600">{employeeCount}</div>
@@ -225,7 +230,7 @@ const Overview: React.FC<CompanyOverviewProps> = ({
                   </div>
                   <div>
                     <div className="font-medium text-neutral-900 flex items-center">
-                      Main Facility
+                      Manufacturing Facility
                       <div className="ml-2 text-xs text-primary-600 font-mono opacity-0 group-hover:opacity-100 transition-opacity">#03</div>
                     </div>
                     <div className="text-sm text-neutral-600">{facilitySize}</div>
@@ -260,21 +265,21 @@ const Overview: React.FC<CompanyOverviewProps> = ({
 
                 <div className="flex items-start group">
                   <div className="w-8 h-8 bg-primary-50 border border-primary-100 flex items-center justify-center mr-3 flex-shrink-0 transition-colors group-hover:bg-primary-100">
-                    <Zap className="text-primary-600" size={16} />
+                    <Recycle className="text-primary-600" size={16} />
                   </div>
                   <div>
                     <div className="font-medium text-neutral-900 flex items-center">
-                      Production Capacity
+                      Sustainability
                       <div className="ml-2 text-xs text-primary-600 font-mono opacity-0 group-hover:opacity-100 transition-opacity">#06</div>
                     </div>
-                    <div className="text-sm text-neutral-600">{productionCapacity}</div>
+                    <div className="text-sm text-neutral-600">93% aluminum recycling rate</div>
                   </div>
                 </div>
               </div>
 
               {/* Technical document reference */}
               <div className="absolute bottom-2 right-2 text-xs font-mono text-neutral-400">
-                DOC.OVERVIEW.{new Date().getFullYear()}
+                CQS.OVERVIEW.{new Date().getFullYear()}
               </div>
             </div>
           </div>

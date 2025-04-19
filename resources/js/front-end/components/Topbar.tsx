@@ -12,14 +12,14 @@ const TopBar: React.FC = () => (
           <div className="flex items-center space-x-6">
             <ContactInfo
               icon={<PhoneCall size={16} />}
-              href="tel:+86-150-3419-1995"
-              text="150-3419-1995"
+              href="tel:+84 251 3981689"
+              text="+84 251 3981689 / 983354"
             />
             <div className="hidden sm:block">
               <ContactInfo
                 icon={<Mail size={16} />}
                 href="mailto:info@zm-cnc.com"
-                text="info@zm-cnc.com"
+                text="daisy@cqs-tech.com.tw"
               />
             </div>
           </div>
